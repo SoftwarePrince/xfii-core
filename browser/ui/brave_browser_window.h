@@ -6,6 +6,7 @@
 #ifndef BRAVE_BROWSER_UI_BRAVE_BROWSER_WINDOW_H_
 #define BRAVE_BROWSER_UI_BRAVE_BROWSER_WINDOW_H_
 
+#include "brave/components/sidebar/buildflags/buildflags.h"
 #include "chrome/browser/ui/browser_window.h"
 
 class BraveBrowserWindow : public BrowserWindow {
@@ -13,6 +14,10 @@ class BraveBrowserWindow : public BrowserWindow {
   ~BraveBrowserWindow() override {}
 
   virtual void StartTabCycling() = 0;
+
+#if BUILDFLAG(ENABLE_SIDEBAR)
+  virtual void InitSidebar() = 0;
+#endif
 };
 
 #endif  // BRAVE_BROWSER_UI_BRAVE_BROWSER_WINDOW_H_

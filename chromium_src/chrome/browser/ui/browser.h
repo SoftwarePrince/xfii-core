@@ -8,7 +8,8 @@
 
 #define BRAVE_BROWSER_H \
  private: \
-  friend class BookmarkPrefsService;
+  friend class BookmarkPrefsService; \
+  friend class BraveBrowser;
 
 #include "../../../../../chrome/browser/ui/browser.h"  // NOLINT
 

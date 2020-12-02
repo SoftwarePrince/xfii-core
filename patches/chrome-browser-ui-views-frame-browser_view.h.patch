@@ -1,0 +1,20 @@
+diff --git a/chrome/browser/ui/views/frame/browser_view.h b/chrome/browser/ui/views/frame/browser_view.h
+index 5af4987533d10d1f3128af97888cc1e4c3f68eae..70598db8dfd9fe04b069c232956e14bca47d7c31 100644
+--- a/chrome/browser/ui/views/frame/browser_view.h
++++ b/chrome/browser/ui/views/frame/browser_view.h
+@@ -621,6 +621,7 @@ class BrowserView : public BrowserWindow,
+     return accessibility_focus_highlight_.get();
+   }
+ 
++  BRAVE_BROWSER_VIEW_H
+  private:
+   // Do not friend BrowserViewLayout. Use the BrowserViewLayoutDelegate
+   // interface to keep these two classes decoupled and testable.
+@@ -650,6 +651,7 @@ class BrowserView : public BrowserWindow,
+   BrowserViewLayout* GetBrowserViewLayout() const;
+ 
+   // Returns the ContentsLayoutManager.
++  virtual
+   ContentsLayoutManager* GetContentsLayoutManager() const;
+ 
+   // Prepare to show the Bookmark Bar for the specified WebContents.

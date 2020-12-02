@@ -23,6 +23,16 @@
       <structure type="chrome_scaled_image" name="IDR_PRODUCT_LOGO_32_DEVELOPMENT" file="brave/product_logo_32_development.png" />
       <if expr="not is_android">
         <structure type="chrome_scaled_image" name="IDR_TOR_WINDOW_FRAME_GRAPHIC" file="brave/tor_window_frame_graphic.png" />
+        <structure type="chrome_scaled_image" name="IDR_SIDEBAR_BRAVE_TOGETHER" file="brave/sidebar_brave_together.png" />
+        <structure type="chrome_scaled_image" name="IDR_SIDEBAR_BRAVE_TOGETHER_FOCUSED" file="brave/sidebar_brave_together_focused.png" />
+        <structure type="chrome_scaled_image" name="IDR_SIDEBAR_CRYPTO_WALLET" file="brave/sidebar_crypto_wallet.png" />
+        <structure type="chrome_scaled_image" name="IDR_SIDEBAR_CRYPTO_WALLET_FOCUSED" file="brave/sidebar_crypto_wallet_focused.png" />
+        <structure type="chrome_scaled_image" name="IDR_SIDEBAR_BOOKMARKS" file="brave/sidebar_bookmark.png" />
+        <structure type="chrome_scaled_image" name="IDR_SIDEBAR_BOOKMARKS_FOCUSED" file="brave/sidebar_bookmark_focused.png" />
+        <structure type="chrome_scaled_image" name="IDR_SIDEBAR_HISTORY" file="brave/sidebar_history.png" />
+        <structure type="chrome_scaled_image" name="IDR_SIDEBAR_HISTORY_FOCUSED" file="brave/sidebar_history_focused.png" />
+        <structure type="chrome_scaled_image" name="IDR_SIDEBAR_ITEM_HIGHLIGHT" file="brave/sidebar_item_highlight.png" />
+        <structure type="chrome_scaled_image" name="IDR_SIDEBAR_ITEM_ADD_FOCUSED" file="brave/sidebar_item_add_focused.png" />
         <!-- Avatar icons -->
         <!-- Generated via zsh :
           > declare -i a=56

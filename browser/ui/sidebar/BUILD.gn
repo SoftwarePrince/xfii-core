@@ -1,0 +1,27 @@
+# Copyright (c) 2020 The Brave Authors. All rights reserved.
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this file,
+# You can obtain one at http://mozilla.org/MPL/2.0/.
+
+source_set("sidebar") {
+  sources = [
+    "sidebar.h",
+    "sidebar_controller.cc",
+    "sidebar_controller.h",
+    "sidebar_model.cc",
+    "sidebar_model.h",
+    "sidebar_model_data.cc",
+    "sidebar_model_data.h",
+    "sidebar_service_factory.cc",
+    "sidebar_service_factory.h",
+  ]
+
+  deps = [
+    "//base",
+    "//brave/components/sidebar",
+    "//components/keyed_service/content",
+    "//components/keyed_service/core",
+    "//content/public/browser",
+    "//skia",
+  ]
+}
