@@ -12,13 +12,11 @@
 
 export type Preferences = {
   showBackgroundImage: boolean
-  brandedWallpaperOptIn: boolean
   showStats: boolean
-  showToday: boolean
   showClock: boolean
   clockFormat: string
   showTopSites: boolean
-  showRewards: boolean
+ // showRewards: boolean
   isBrandedWallpaperNotificationDismissed: boolean
 }
 
@@ -48,41 +46,23 @@ export function saveShowStats (value: boolean): void {
   sendSavePref('showStats', value)
 }
 
-export function saveShowToday (value: boolean): void {
-  sendSavePref('showToday', value)
-}
 
+/*
 export function saveShowRewards (value: boolean): void {
   sendSavePref('showRewards', value)
 }
+*/
 
-export function saveShowTogether (value: boolean): void {
-  sendSavePref('showTogether', value)
-}
 
-export function saveShowBinance (value: boolean): void {
-  sendSavePref('showBinance', value)
-}
 
-export function saveBrandedWallpaperOptIn (value: boolean): void {
-  sendSavePref('brandedWallpaperOptIn', value)
+export function saveSetAllStackWidgets (value: boolean): void {
+
 }
 
 export function saveIsBrandedWallpaperNotificationDismissed (value: boolean): void {
   sendSavePref('isBrandedWallpaperNotificationDismissed', value)
 }
 
-export function saveShowGemini (value: boolean): void {
-  sendSavePref('showGemini', value)
-}
-
-export function saveShowBitcoinDotCom (value: boolean): void {
-  sendSavePref('showBitcoinDotCom', value)
-}
-
-export function saveShowCryptoDotCom (value: boolean): void {
-  sendSavePref('showCryptoDotCom', value)
-}
 
 export function addChangeListener (listener: PreferencesUpdatedHandler): void {
   window.cr.addWebUIListener('preferences-changed', listener)

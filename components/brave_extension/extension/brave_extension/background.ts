@@ -5,7 +5,6 @@
 import * as bluebird from 'bluebird'
 
 import './background/greaselion'
-import './background/today'
 
 global.Promise = bluebird
 

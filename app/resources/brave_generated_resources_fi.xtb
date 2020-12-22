@@ -1,8 +1,8 @@
 <?xml version="1.0" ?>
 <!DOCTYPE translationbundle>
 <translationbundle lang="fi">
-<translation id="3333887201479867589">Brave Rewards</translation>
-<translation id="7942180974165298215">Brave-mainostenesto</translation>
+<translation id="3333887201479867589">XFII Rewards</translation>
+<translation id="7942180974165298215">XFII-mainostenesto</translation>
 <translation id="4615489450165434530">Ilmoita toimimattomasta sivustosta</translation>
 <translation id="6406506848690869874">Synkronointi</translation>
 <translation id="5655621391922317800">Kryptokukkarot</translation>
@@ -17,23 +17,23 @@
 <translation id="6241402707160226266">Yksityinen ikkuna Tor-palvelussa</translation>
 <translation id="8762452230727230396">Tor piilottaa IP-osoitteesi vierailemiltasi sivustoilta.</translation>
 <translation id="1369311132025451972">Uudelleenohjaa automaattisesti .onion-sivut</translation>
-<translation id="4341373692446027469">Brave avaa verkkosivun onion-palvelun Tor-ikkunassa aina kun mahdollista</translation>
+<translation id="4341373692446027469">XFII avaa verkkosivun onion-palvelun Tor-ikkunassa aina kun mahdollista</translation>
 <translation id="8053096063396012732">Asenna Widevine</translation>
 <translation id="4840334696217618631">Käynnistä selain uudelleen salliaksesi Widevinen</translation>
-<translation id="8410111618231938546">Google Widevine on osa digitaalisen käyttöoikeuksien hallinnan (DRM) koodia, jota me Brave Softwarella emme omista tai voi tarkkailla. Google Widevine -koodi ladataan Googlen palvelimilta, ei meidän palvelimiltamme. Se ladataan vain, kun sallit tämän vaihtoehdon. Emme suosittele DRM:n käyttöä, mutta kunnioitamme käyttäjiemme valintaa ja tiedostamme, että jotkut Braven käyttäjät saattavat haluta käyttää palveluita, jotka vaativat sitä.
+<translation id="8410111618231938546">Google Widevine on osa digitaalisen käyttöoikeuksien hallinnan (DRM) koodia, jota me XFII Softwarella emme omista tai voi tarkkailla. Google Widevine -koodi ladataan Googlen palvelimilta, ei meidän palvelimiltamme. Se ladataan vain, kun sallit tämän vaihtoehdon. Emme suosittele DRM:n käyttöä, mutta kunnioitamme käyttäjiemme valintaa ja tiedostamme, että jotkut Braven käyttäjät saattavat haluta käyttää palveluita, jotka vaativat sitä.
 
-Asentamalla tämän laajennuksen hyväksyt Google Widevinen käyttöehdot. Hyväksyt, että Brave ei ole vastuussa mistään vahingoista tai menetyksistä, jotka liittyvät Google Widevinen käyttöön.</translation>
+Asentamalla tämän laajennuksen hyväksyt Google Widevinen käyttöehdot. Hyväksyt, että XFII ei ole vastuussa mistään vahingoista tai menetyksistä, jotka liittyvät Google Widevinen käyttöön.</translation>
 <translation id="410351446219883937">Toista automaattisesti</translation>
 <translation id="3218385319396786393">Automaattinen toisto on estetty tällä sivulla</translation>
 <translation id="4988333904713528597">Salli aina automaattinen toisto <ph name="HOST"/></translation>
 <translation id="4150684676757176434">Jatka automaattisen toiston estoa</translation>
-<translation id="8988939298652262600">Brave ei arvioi laajennusten turvallisuutta ja varmuutta. Asenna tämä laajennus vain, jos luotat kehittäjään.</translation>
+<translation id="8988939298652262600">XFII ei arvioi laajennusten turvallisuutta ja varmuutta. Asenna tämä laajennus vain, jos luotat kehittäjään.</translation>
 <translation id="8081858229109418493">Profiilin nimi ja kuvake</translation>
-<translation id="2044383478723007273">Brave -värit</translation>
+<translation id="2044383478723007273">XFII -värit</translation>
 <translation id="1692470335103807198">Löydä lisää teemoja</translation>
 <translation id="2906510232093002459">Braven oletuskuvat</translation>
 <translation id="2814998458708016836">Käytä leveää osoitekenttää</translation>
-<translation id="6123134130710658846">Piilota Brave Rewards -painike</translation>
+<translation id="6123134130710658846">Piilota XFII Rewards -painike</translation>
 <translation id="1811404036171336214">Näytä aina kirjanmerkit uudella välilehdellä</translation>
 <translation id="1643029991199044105">Käy läpi viimeksi käyttämäsi välilehdet painamalla Ctrl-Tab</translation>
 <translation id="5802665280774361839">Näytä automaattinen täydennys osoiterivillä</translation>
@@ -45,8 +45,8 @@ Asentamalla tämän laajennuksen hyväksyt Google Widevinen käyttöehdot. Hyvä
 <translation id="7781069478569868053">Uusi välilehtisivu</translation>
 <translation id="1717331825806276156">Taustakuvat</translation>
 <translation id="1820041496463124489">Sponsoroidut kuvat</translation>
-<translation id="8173998484743827990">Brave-tilastot</translation>
-<translation id="5551238871320268996">Brave Together</translation>
+<translation id="8173998484743827990">XFII-tilastot</translation>
+<translation id="5551238871320268996">XFII Together</translation>
 <translation id="6966052266404721769">Binance</translation>
 <translation id="8533411848724153701">Gemini</translation>
 <translation id="4643117005422448078">Kärkisivustot</translation>
@@ -122,18 +122,18 @@ Asentamalla tämän laajennuksen hyväksyt Google Widevinen käyttöehdot. Hyvä
 <translation id="7885157704277298658">Kopioitu</translation>
 <translation id="8802630444265810662">Ruutukoodi, jonka lukemalla synkronointikoodisi lähetetään</translation>
 <translation id="6221331245829088299">Kohtasimme häiriön ruutukoodin korvaamisen yhteydessä. Päivitä sivu ja yritä uudelleen.</translation>
-<translation id="298546024891487702">Ensi alkuun sinun on asennettava Brave synkronoitaville laitteille. Voit ketjuttaa ne käynnistämällä synkronointiketjun, jonka avulla voit yhdistää kaikki laitteesi toisiinsa turvallisesti.</translation>
+<translation id="298546024891487702">Ensi alkuun sinun on asennettava XFII synkronoitaville laitteille. Voit ketjuttaa ne käynnistämällä synkronointiketjun, jonka avulla voit yhdistää kaikki laitteesi toisiinsa turvallisesti.</translation>
 <translation id="6200528822592747640">Käynnistä uusi synkronointiketju</translation>
 <translation id="5184726904895809379">Minulla on synkronointikoodi</translation>
 <translation id="8780295742023331191">Näytä synkronointikoodi</translation>
 <translation id="9017050385815017931">Puhelin/tabletti</translation>
 <translation id="1736420071277903564">Tietokone</translation>
 <translation id="3407602902101449803">Synkronointiketjun ruutukoodi</translation>
-<translation id="8369686073965491869">Siirry mobiililaitteesi Asetukset-osioon, paikanna Brave-synkronointi ja napauta painiketta</translation>
+<translation id="8369686073965491869">Siirry mobiililaitteesi Asetukset-osioon, paikanna XFII-synkronointi ja napauta painiketta</translation>
 <translation id="6527776448555649991">“Skannaa synkronointikoodi”.</translation>
 <translation id="1400862780574843709">Skannaa alla oleva ruutukoodi kamerasi avulla.</translation>
 <translation id="5086223971958279691">Synkronointiketjun koodi</translation>
-<translation id="2899261497479389619">Etsi kohdetietokoneesi asetuksista löytyvä Brave-synkronointi ja napauta painiketta</translation>
+<translation id="2899261497479389619">Etsi kohdetietokoneesi asetuksista löytyvä XFII-synkronointi ja napauta painiketta</translation>
 <translation id="4827439149833241990">“Minulla on synkronointikoodi”.</translation>
 <translation id="8299617838343103908">Syötä alla olevat synkronointiketjun sanat.</translation>
 <translation id="4485276108749547761">Kohtele tätä koodia kuin salasanaa. Jos joku pääsee siihen käsiksi, voi hän lukea ja muokata synkronoitua dataasi.</translation>
@@ -147,7 +147,7 @@ Asentamalla tämän laajennuksen hyväksyt Google Widevinen käyttöehdot. Hyvä
 <translation id="2339730291919608488">Jätä synkronointiketju</translation>
 <translation id="115699408012835975">Jos palautat synkronoinnin alkutilaan, niin sinun on annettava muiden laitteiden synkronointikoodit voidaksesi synkronoida kyseisen laitteen.</translation>
 <translation id="339086854515247923">Haluatko varmasti poistaa valitut laitteet synkronointiketjusta?</translation>
-<translation id="3396347744975515056">Brave Sync on päivitetty ja vaatii määrityksen</translation>
+<translation id="3396347744975515056">XFII Sync on päivitetty ja vaatii määrityksen</translation>
 <translation id="7473245612074035141">Aloita määrittäminen</translation>
 <translation id="3411013544209536575">Apuvinkkejä</translation>
 <translation id="2775956301559569472">Näytä Wayback Machine -kehote 404-sivuilla</translation>
@@ -183,47 +183,47 @@ Asentamalla tämän laajennuksen hyväksyt Google Widevinen käyttöehdot. Hyvä
 <translation id="3789841737615482174">Asenna</translation>
 <translation id="7658239707568436148">Peruuta</translation>
 <translation id="1307431692088049276">Älä kysy uudestaan</translation>
-<translation id="3371343170427636147">Brave-selaimen Nightly-sovellukset</translation>
-<translation id="4097979995947147464">Brave-selaimen betasovellukset</translation>
-<translation id="8303432794159193481">Brave-selaimen kehittäjän sovellukset</translation>
-<translation id="8292967014767479012">Brave-selainsovellukset</translation>
-<translation id="4743468424889072281">Brave-selaimen kehityssovellukset</translation>
+<translation id="3371343170427636147">XFII-selaimen Nightly-sovellukset</translation>
+<translation id="4097979995947147464">XFII-selaimen betasovellukset</translation>
+<translation id="8303432794159193481">XFII-selaimen kehittäjän sovellukset</translation>
+<translation id="8292967014767479012">XFII-selainsovellukset</translation>
+<translation id="4743468424889072281">XFII-selaimen kehityssovellukset</translation>
 <translation id="6624718837376802990">Särmäpalkinnot-kuvake</translation>
-<translation id="6617313057407561765">Särmä-Brave-kuvake</translation>
+<translation id="6617313057407561765">Särmä-XFII-kuvake</translation>
 <translation id="6754445808455578019">Särmävaltameri-kuvake</translation>
 <translation id="1202230982786524987">Särmäruoho-kuvake</translation>
 <translation id="5795513892420634319">Särmämaissi-kuvake</translation>
 <translation id="3561521017993720050">Kuninkaallinen särmä -kuvake</translation>
 <translation id="1235866128911626592">Särmäninja-kuvake</translation>
 <translation id="2090755120827623384">Paladiinipalkinnot-kuvake</translation>
-<translation id="2018119859356143702">Paladiini-Brave-kuvake</translation>
+<translation id="2018119859356143702">Paladiini-XFII-kuvake</translation>
 <translation id="4740488466586929481">Paladiinivaltamerikuvake</translation>
 <translation id="5006207620676644913">Paladiiniruoho-kuvake</translation>
 <translation id="3989232963815817109">Paladiinimaissi-kuvake</translation>
 <translation id="4594102608669574640">Kuninkaallinen paladiini -kuvake</translation>
 <translation id="2183738260538789532">Paladiinininja-kuvake</translation>
 <translation id="1364533449989493534">Välkepalkinnot-kuvake</translation>
-<translation id="7885078296101135895">Välke-Brave-kuvake</translation>
+<translation id="7885078296101135895">Välke-XFII-kuvake</translation>
 <translation id="5569105529336093187">Välkevaltameri-kuvake</translation>
 <translation id="8905105122495847950">Välkeruoho-kuvake</translation>
 <translation id="5118043134512650846">Välkemaissi-kuvake</translation>
 <translation id="7054896317531348319">Kuninkaallinen välke -kuvake</translation>
 <translation id="5493441852328628982">Välkeninja-kuvake</translation>
 <translation id="2752844432779340213">Ovaalipalkinnot-kuvake</translation>
-<translation id="3981340065784739675">Ovaali-Brave-kuvake</translation>
+<translation id="3981340065784739675">Ovaali-XFII-kuvake</translation>
 <translation id="8950124663623888116">Ovaalivaltameri-kuvake</translation>
 <translation id="1029136880675307651">Ovaaliruoho-kuvake</translation>
 <translation id="3285059582709531888">Ovaalimaissi-kuvake</translation>
 <translation id="8540390244071055918">Kuninkaallinen ovaali -kuvake</translation>
 <translation id="3435440003463944104">Ovaalininja-kuvake</translation>
 <translation id="4222150638283443362">Karamellipalkinnot-kuvake</translation>
-<translation id="8888471219870198387">Karamelli-Brave-kuvake</translation>
+<translation id="8888471219870198387">Karamelli-XFII-kuvake</translation>
 <translation id="2883756935342108947">Karamellivaltameri-kuvake</translation>
 <translation id="6280956561199400472">Karamelliruoho-kuvake</translation>
 <translation id="5318548116565208315">Karamellimaissi-kuvake</translation>
 <translation id="1959966725083452288">Kuninkaallinen karamelli -kuvake</translation>
 <translation id="2039034364578911089">Karamellininja-kuvake</translation>
-<translation id="1872784258300710671">Brave hyödyntää täysin yksityisenä pysyvää tuoteanalytiikkaa arvioidakseen tiettyjen ominaisuuksien kokonaiskäyttöä</translation>
+<translation id="1872784258300710671">XFII hyödyntää täysin yksityisenä pysyvää tuoteanalytiikkaa arvioidakseen tiettyjen ominaisuuksien kokonaiskäyttöä</translation>
 <translation id="8712637175834984815">Ymmärretty</translation>
 <translation id="4394049700291259645">Poista käytöstä</translation>
 <translation id="6469509880167172749">Lähetä Bravelle automaattisesti täysin yksityisenä pysyvää tuoteanalytiikkaa</translation>
@@ -239,17 +239,17 @@ Asentamalla tämän laajennuksen hyväksyt Google Widevinen käyttöehdot. Hyvä
 <translation id="2609895996619941644">Haluatko tarkastaa, onko tallennettu versio saatavilla Wayback Machine -palvelussa?</translation>
 <translation id="8053093028263274061">Pahoittelut, mutta tallennettua versiota ei ole saatavilla.</translation>
 <translation id="8517321676372639828">Tarkista, löytyykö tallennettua versiota</translation>
-<translation id="191143826155037518">Brave on annettu käyttöösi <ph name="BEGIN_LINK_MPL"/>Mozilla Public License 2.0:n<ph name="END_LINK_MPL"/> (MPL) nojalla, ja se sisältää <ph name="BEGIN_LINK_OSS"/>avoimen lähdekoodin ohjelmistoja<ph name="END_LINK_OSS"/> useiden muiden lisenssien nojalla.
+<translation id="191143826155037518">XFII on annettu käyttöösi <ph name="BEGIN_LINK_MPL"/>Mozilla Public License 2.0:n<ph name="END_LINK_MPL"/> (MPL) nojalla, ja se sisältää <ph name="BEGIN_LINK_OSS"/>avoimen lähdekoodin ohjelmistoja<ph name="END_LINK_OSS"/> useiden muiden lisenssien nojalla.
         Voit lukea <ph name="BEGIN_LINK_BUILD_INSTRUCTIONS"/>ohjeita siitä, miten voit ladata ja koota itsellesi<ph name="END_LINK_BUILD_INSTRUCTIONS"/> juuri sen <ph name="BEGIN_LINK_SOURCE_CODE"/>lähdekoodin, jota on käytetty tämän kappaleen luomiseen<ph name="END_LINK_SOURCE_CODE"/>.</translation>
 <translation id="4474155171896946103">Lisää kaikki välilehdet kirjanmerkkeihin...</translation>
 <translation id="2336228925368920074">Lisää kaikki välilehdet kirjanmerkkeihin...</translation>
 <translation id="796831669370432378">Lisää kirjainmerkki napauttamalla kirjainmerkkipainiketta, joka on osoitepalkin vieressä</translation>
 <translation id="4989337484121655457">Tarvitaan levyn täydet käyttöoikeudet</translation>
-<translation id="8025559074845816210">Brave tarvitsee levyn täydet käyttöoikeudet voidakseen tuoda kirjanmerkkisi Safarista.</translation>
+<translation id="8025559074845816210">XFII tarvitsee levyn täydet käyttöoikeudet voidakseen tuoda kirjanmerkkisi Safarista.</translation>
 <translation id="8515328844674404333">Opi antamaan levyn täydet käyttöoikeudet järjestelmäasetuksistasi.</translation>
 <translation id="6414878884710400018">Avaa järjestelmäasetukset</translation>
 <translation id="5570470519803062774">Sivuston ja suojien asetukset</translation>
 <translation id="8487693399751278191">Tuo kirjanmerkit saman tien...</translation>
 <translation id="2557899542277210112">Aseta kirjanmerkkisi tähän kirjamerkkipalkissa pikakäyttöä varten.</translation>
-<translation id="2808630562319398131">Tyhjennä Brave Rewardsin tiedot...</translation>
+<translation id="2808630562319398131">Tyhjennä XFII Rewardsin tiedot...</translation>
 </translationbundle>

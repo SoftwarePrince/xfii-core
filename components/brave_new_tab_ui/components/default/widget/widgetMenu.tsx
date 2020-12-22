@@ -5,13 +5,10 @@
 
 import * as React from 'react'
 
-import { StyledWidgetMenuContainer, StyledWidgetMenu, StyledWidgetButton, StyledWidgetIcon, StyledSpan, StyledWidgetLink, StyledEllipsis } from './styles'
+import { StyledWidgetMenuContainer, StyledWidgetMenu, StyledWidgetButton, StyledWidgetIcon, StyledSpan,  StyledEllipsis } from './styles'
 import { IconButton } from '../../default'
 import EllipsisIcon from './assets/ellipsis'
 import HideIcon from './assets/hide'
-import LearnMoreIcon from './assets/learn-more'
-import DisconnectIcon from './assets/disconnect'
-import RefreshIcon from './assets/refresh'
 import { getLocale } from '../../../../common/locale'
 
 interface Props {
@@ -77,10 +74,6 @@ export default class WidgetMenu extends React.PureComponent<Props, State> {
     this.closeMenu()
   }
 
-  closeMenuBinance = (action: any) => {
-    action()
-    this.closeMenu()
-  }
 
   render () {
     const {
@@ -91,9 +84,6 @@ export default class WidgetMenu extends React.PureComponent<Props, State> {
       isForeground,
       lightWidget,
       paddingType,
-      onLearnMore,
-      onDisconnect,
-      onRefreshData
     } = this.props
     const { showMenu } = this.state
     const hideString = widgetTitle ? `${getLocale('hide')} ${widgetTitle}` : getLocale('hide')
@@ -110,40 +100,7 @@ export default class WidgetMenu extends React.PureComponent<Props, State> {
           menuPosition={menuPosition}
           widgetMenuPersist={widgetMenuPersist}
         >
-          {
-            onLearnMore
-            ? <StyledWidgetLink
-                onClick={this.closeMenuBinance.bind(this, onLearnMore)}
-            >
-              <StyledWidgetIcon><LearnMoreIcon/></StyledWidgetIcon>
-              <StyledSpan>{getLocale('learnMore')}</StyledSpan>
-            </StyledWidgetLink>
-            : null
-          }
-          {
-            onRefreshData
-            ? <StyledWidgetButton onClick={this.closeMenuBinance.bind(this, onRefreshData)}>
-                <StyledWidgetIcon isBinance={true} isRefresh={true}>
-                  <RefreshIcon/>
-                </StyledWidgetIcon>
-                <StyledSpan>
-                  {getLocale('binanceWidgetRefreshData')}
-                </StyledSpan>
-              </StyledWidgetButton>
-            : null
-          }
-          {
-            onDisconnect
-            ? <StyledWidgetButton onClick={this.closeMenuBinance.bind(this, onDisconnect)}>
-                <StyledWidgetIcon isBinance={true}>
-                  <DisconnectIcon/>
-                </StyledWidgetIcon>
-                <StyledSpan>
-                  {getLocale('binanceWidgetDisconnectButton')}
-                </StyledSpan>
-              </StyledWidgetButton>
-            : null
-          }
+        
           <StyledWidgetButton
             onClick={this.unmountWidget}
           >

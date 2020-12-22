@@ -65,7 +65,7 @@ TEST(SpeedreaderFFITest, URLNotReadable) {
 
 TEST(SpeedreaderFFITest, URLInvalid) {
   SpeedReader sr;
-  std::string url_str = "brave://about";
+  std::string url_str = "xfii://about";
   EXPECT_FALSE(sr.IsReadableURL(url_str));
 }
 

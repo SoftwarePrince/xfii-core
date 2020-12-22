@@ -1,6 +1,6 @@
 {
   "braveRewards": {
-    "message": "Odmeny Brave",
+    "message": "Odmeny XFII",
     "description": "Title in welcome screen for the panel"
   },
   "welcomeButtonTextOne": {
@@ -32,7 +32,7 @@
     "description": "Link in the footer (takes you to rewards settings page) for welcome screen in the panel, new user"
   },
   "welcomeHeaderOne": {
-    "message": "Pre Brave odmeny sme pripravili veľký upgrade.",
+    "message": "Pre XFII odmeny sme pripravili veľký upgrade.",
     "description": "Main header title for welcome screen in the panel, existing user"
   },
   "welcomeHeaderTwo": {
@@ -60,7 +60,7 @@
     "description": "BAT Points text"
   },
   "batPointsMessage": {
-    "message": "dá sa použiť v odmenách Brave ako príspevok najobľúbenejším tvorcom obsahu. BAT body sa nedajú vymeniť za BAT.",
+    "message": "dá sa použiť v odmenách XFII ako príspevok najobľúbenejším tvorcom obsahu. BAT body sa nedajú vymeniť za BAT.",
     "description": "Text for BAT Point helper message"
   },
   "on": {
@@ -68,8 +68,8 @@
     "description": "The whole string is 'Enable tips on YouTube for like.'"
   },
   "verifiedPublisher": {
-    "message": "Brave verifikovaný tvorca",
-    "description": "Tells user that this particular publisher is a Brave Verified Creator"
+    "message": "XFII verifikovaný tvorca",
+    "description": "Tells user that this particular publisher is a XFII Verified Creator"
   },
   "rewardsContributeAttentionScore": {
     "message": "Pozornosť",
@@ -198,7 +198,7 @@
     "description": "Message for ads launch notification"
   },
   "braveAdsTitle": {
-    "message": "Reklamy Brave",
+    "message": "Reklamy XFII",
     "description": "Notification title when we display info about ads"
   },
   "braveContributeTitle": {
@@ -232,11 +232,11 @@
     "description": "Notification title when we ask user to backup wallet"
   },
   "backupWalletNotification": {
-    "message": "Prosím, zálohujte svoju peňaženku Brave.",
+    "message": "Prosím, zálohujte svoju peňaženku XFII.",
     "description": "Description for backup wallet notification"
   },
   "insufficientFundsNotification": {
-    "message": "Na vašom účte Brave odmeny sa očakáva vklad.",
+    "message": "Na vašom účte XFII odmeny sa očakáva vklad.",
     "description": "Description for new insufficient funds notification"
   },
   "insufficientFunds": {
@@ -296,7 +296,7 @@
     "description": "Button text for clearing the error."
   },
   "grantGeneralErrorText": {
-    "message": "Brave rewards majú nejaký problém. Prosím, skúste to znovu.",
+    "message": "XFII rewards majú nejaký problém. Prosím, skúste to znovu.",
     "description": "Error text when user is having problems claiming a grant."
   },
   "grantGeneralErrorTitle": {
@@ -312,7 +312,7 @@
     "description": "Status of the publisher shown in the panel"
   },
   "unVerifiedText": {
-    "message": "Tento tvorca sa ešte nezaregistroval, aby dostával príspevky od používateľov Brave. Všetky tipy, ktoré odošlete, zostanú vo vašej peňaženke, kým ich neoveria.",
+    "message": "Tento tvorca sa ešte nezaregistroval, aby dostával príspevky od používateľov XFII. Všetky tipy, ktoré odošlete, zostanú vo vašej peňaženke, kým ich neoveria.",
     "description": "Notice about unverified publisher."
   },
   "unVerifiedTextMore": {
@@ -340,7 +340,7 @@
     "description": "Text for Panel's disabled state"
   },
   "disabledPanelTitle": {
-    "message": "Brave rewards je",
+    "message": "XFII rewards je",
     "description": "Title for Panel's disabled state"
   },
   "walletFailedTitle": {
@@ -376,7 +376,7 @@
     "description": "Text block for wallet disabled panel"
   },
   "enableRewards": {
-    "message": "Povoliť odmeny Brave",
+    "message": "Povoliť odmeny XFII",
     "description": "Subtitle for wallet disabled panel"
   },
   "privacyPolicy": {
@@ -384,7 +384,7 @@
     "description": "Privacy Policy"
   },
   "serviceText": {
-    "message": "Kliknutím na „Povoliť Brave odmeny“ označíte, že ste si prečítali a súhlasíte s",
+    "message": "Kliknutím na „Povoliť XFII odmeny“ označíte, že ste si prečítali a súhlasíte s",
     "description": "Terms of service main text"
   },
   "termsOfService": {
@@ -492,7 +492,7 @@
     "description": "Cosmetic text upon captcha success for ads"
   },
   "grantFinishTextAds": {
-    "message": "Vaša odmena je na ceste do vašej peňaženky odmien Brave",
+    "message": "Vaša odmena je na ceste do vašej peňaženky odmien XFII",
     "description": "Cosmetic text indicating ads funds are on the way"
   },
   "grantFinishTokenTitleAds": {
@@ -520,7 +520,7 @@
     "description": "CTA to open uphold account"
   },
   "walletDisconnect":  {
-    "message": "Odpojiť sa od Brave Rewards",
+    "message": "Odpojiť sa od XFII Rewards",
     "description": "CTA to disconnect user wallet from rewards"
   },
   "walletVerified":  {
@@ -550,7 +550,7 @@
     "description": "Title for notification when wallet is disconnected"
   },
   "connectedText":  {
-    "message": "Tento overený tvorca Brave si ešte nenakonfiguroval účet na príjem príspevkov od používateľov Brave. Finančné príspevky na prevádzku, ktoré mu odošlete, zostanú vo vašej peňaženke dovtedy, kým celý proces nedokončia.",
+    "message": "Tento overený tvorca XFII si ešte nenakonfiguroval účet na príjem príspevkov od používateľov XFII. Finančné príspevky na prevádzku, ktoré mu odošlete, zostanú vo vašej peňaženke dovtedy, kým celý proces nedokončia.",
     "description": "Text shown for connected publishers that are not fully verified in the panel"
   },
   "walletGoToVerifyPage":  {

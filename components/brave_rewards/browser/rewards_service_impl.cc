@@ -219,7 +219,7 @@ net::NetworkTrafficAnnotationTag GetNetworkTrafficAnnotationTagForURLLoad() {
         cookies_allowed: NO
         setting:
           "You can enable or disable this feature via the BAT icon in the URL "
-          "bar or by visiting brave://rewards/."
+          "bar or by visiting xfii://rewards/."
         policy_exception_justification:
           "Not implemented."
       })");
@@ -2942,7 +2942,7 @@ void RewardsServiceImpl::ProcessRewardsPageUrl(
 
   std::map<std::string, std::string> query_map;
 
-  const auto url = GURL("brave:/" + path + query);
+  const auto url = GURL("xfii:/" + path + query);
   for (net::QueryIterator it(url); !it.IsAtEnd(); it.Advance()) {
     query_map[it.GetKey()] = it.GetUnescapedValue();
   }

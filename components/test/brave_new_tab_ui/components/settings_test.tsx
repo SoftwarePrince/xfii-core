@@ -20,9 +20,7 @@ describe('settings component tests', () => {
     toggleShowBinance: () => undefined,
     toggleBrandedWallpaperOptIn: () => undefined,
     brandedWallpaperOptIn: false,
-    allowSponsoredWallpaperUI: false,
-    showRewards: false,
-    showBinance: false,
+    showBinance: true,
     binanceSupported: false
   }
 
@@ -40,12 +38,9 @@ describe('settings component tests', () => {
         showClock={mockProps.showClock}
         showStats={mockProps.showStats}
         showTopSites={mockProps.showTopSites}
-        toggleShowRewards={mockProps.toggleShowRewards}
         toggleShowBinance={mockProps.toggleShowBinance}
         toggleBrandedWallpaperOptIn={mockProps.toggleBrandedWallpaperOptIn}
         brandedWallpaperOptIn={mockProps.brandedWallpaperOptIn}
-        allowSponsoredWallpaperUI={mockProps.allowSponsoredWallpaperUI}
-        showRewards={mockProps.showRewards}
         showBinance={mockProps.showBinance}
         binanceSupported={mockProps.binanceSupported}
       />)
@@ -56,7 +51,6 @@ describe('settings component tests', () => {
     const wrapper = shallow(
       <Settings
         textDirection={mockProps.textDirection}
-        onClickOutside={mockProps.onClickOutside}
         showSettingsMenu={true}
         toggleShowBackgroundImage={mockProps.toggleShowBackgroundImage}
         showBackgroundImage={mockProps.showBackgroundImage}
@@ -66,12 +60,9 @@ describe('settings component tests', () => {
         showClock={mockProps.showClock}
         showStats={mockProps.showStats}
         showTopSites={mockProps.showTopSites}
-        toggleShowRewards={mockProps.toggleShowRewards}
         toggleShowBinance={mockProps.toggleShowBinance}
         toggleBrandedWallpaperOptIn={mockProps.toggleBrandedWallpaperOptIn}
         brandedWallpaperOptIn={mockProps.brandedWallpaperOptIn}
-        allowSponsoredWallpaperUI={mockProps.allowSponsoredWallpaperUI}
-        showRewards={mockProps.showRewards}
         showBinance={mockProps.showBinance}
         binanceSupported={mockProps.binanceSupported}
       />)

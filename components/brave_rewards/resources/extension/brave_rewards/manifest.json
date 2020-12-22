@@ -1,8 +1,8 @@
 {
   "version": "1.0.0",
-  "name": "Brave Rewards",
+  "name": "XFII Rewards",
   "manifest_version": 2,
-  "description": "Brave Rewards Extension",
+  "description": "XFII Rewards Extension",
   "default_locale": "en_US",
   "incognito": "not_allowed",
   "background" : {

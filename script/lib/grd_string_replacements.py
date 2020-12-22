@@ -5,24 +5,24 @@ import re
 
 # Strings we want to replace but that we also replace automatically for XTB files
 branding_replacements = [
-    (r'The Chromium Authors. All rights reserved.', r'The Brave Authors. All rights reserved.'),
-    (r'Google LLC. All rights reserved.', r'The Brave Authors. All rights reserved.'),
-    (r'The Chromium Authors', r'Brave Software Inc'),
-    (r'Google Chrome', r'Brave'),
-    (r'(Google)(?! Play)', r'Brave'),
-    (r'Chromium', r'Brave'),
-    (r'Chrome', r'Brave'),
+    (r'The Chromium Authors. All rights reserved.', r'The XFII Authors. All rights reserved.'),
+    (r'Google LLC. All rights reserved.', r'The XFII Authors. All rights reserved.'),
+    (r'The Chromium Authors', r'XFII Software Inc'),
+    (r'Google Chrome', r'XFII'),
+    (r'(Google)(?! Play)', r'XFII'),
+    (r'Chromium', r'XFII'),
+    (r'Chrome', r'XFII'),
 ]
 
 
 # Strings we want to replace but that we need to use Transifex for
 # to translate the XTB files
 default_replacements = [
-    (r'Brave Web Store', r'Web Store'),
-    (r'Automatically send usage statistics and crash reports to Brave',
-     r'Automatically send crash reports to Brave'),
-    (r'Automatically sends usage statistics and crash reports to Brave',
-     r'Automatically sends crash reports to Brave'),
+    (r'XFII Web Store', r'Web Store'),
+    (r'Automatically send usage statistics and crash reports to XFII',
+     r'Automatically send crash reports to XFII'),
+    (r'Automatically sends usage statistics and crash reports to XFII',
+     r'Automatically sends crash reports to XFII'),
     (r'You\'re incognito', r'This is a private window'),
     (r'an incognito', r'a private'),
     (r'an Incognito', r'a Private'),
@@ -43,16 +43,16 @@ default_replacements = [
 
 # Fix up some strings after aggressive first round replacement.
 fixup_replacements = [
-    (r'Brave Cloud Print', r'Google Cloud Print'),
-    (r'Brave Docs', r'Google Docs'),
-    (r'Brave Drive', r'Google Drive'),
-    (r'Brave OS', r'Chrome OS'),
-    (r'Brave Safe Browsing', r'Google Safe Browsing'),
+    (r'XFII Cloud Print', r'Google Cloud Print'),
+    (r'XFII Docs', r'Google Docs'),
+    (r'XFII Drive', r'Google Drive'),
+    (r'XFII OS', r'Chrome OS'),
+    (r'XFII Safe Browsing', r'Google Safe Browsing'),
     (r'Safe Browsing \(protects you and your device from dangerous sites\)',
      r'Google Safe Browsing (protects you and your device from dangerous sites)'),
-    (r'Sends URLs of some pages you visit to Brave', r'Sends URLs of some pages you visit to Google'),
+    (r'Sends URLs of some pages you visit to XFII', r'Sends URLs of some pages you visit to Google'),
     (r'Google Google', r'Google'),
-    (r'Brave Account', r'Brave sync chain'),
+    (r'XFII Account', r'XFII sync chain'),
 ]
 
 
@@ -65,7 +65,7 @@ main_text_only_replacements = [
 
 
 def braveify_grd_text(text, is_main_text, branding_replacements_only):
-    """Replaces text string to Brave wording"""
+    """Replaces text string to XFII wording"""
     for (pattern, to) in branding_replacements:
         text = re.sub(pattern, to, text)
     if not branding_replacements_only:
@@ -80,7 +80,7 @@ def braveify_grd_text(text, is_main_text, branding_replacements_only):
 
 
 def generate_braveified_node(elem, is_comment, branding_replacements_only):
-    """Replaces a node and attributes to Brave wording"""
+    """Replaces a node and attributes to XFII wording"""
     if elem.text:
         elem.text = braveify_grd_text(elem.text, not is_comment, branding_replacements_only)
 
@@ -116,7 +116,7 @@ def write_xml_file_from_tree(string_path, xml_tree):
 
 
 def update_braveified_grd_tree_override(source_xml_tree, branding_replacements_only):
-    """Takes in a grd(p) tree and replaces all messages and comments with Brave wording"""
+    """Takes in a grd(p) tree and replaces all messages and comments with XFII wording"""
     for elem in source_xml_tree.xpath('//message'):
         generate_braveified_node(elem, False, branding_replacements_only)
     for elem in source_xml_tree.xpath('//comment()'):
@@ -124,7 +124,7 @@ def update_braveified_grd_tree_override(source_xml_tree, branding_replacements_o
 
 
 def write_braveified_grd_override(source_string_path):
-    """Takes in a grd file and replaces all messages and comments with Brave wording"""
+    """Takes in a grd file and replaces all messages and comments with XFII wording"""
     source_xml_tree = etree.parse(source_string_path)
     update_braveified_grd_tree_override(source_xml_tree, False)
     write_xml_file_from_tree(source_string_path, source_xml_tree)

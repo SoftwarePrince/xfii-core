@@ -14,7 +14,7 @@ describe('stackWidgetReducer', () => {
     it('adds widget if it is not in the stack and sets it to the foreground', () => {
       const assertion = stackWidgetReducer({
         ...storage.defaultState,
-        widgetStackOrder: ['rewards']
+        widgetStackOrder: ['binance']
       }, {
         type: types.SET_FOREGROUND_STACK_WIDGET,
         payload: {
@@ -23,7 +23,7 @@ describe('stackWidgetReducer', () => {
       })
       const expectedState = {
         ...storage.defaultState,
-        widgetStackOrder: ['rewards', 'binance']
+        widgetStackOrder: [ 'binance']
       }
       expect(assertion).toEqual(expectedState)
     })
@@ -31,7 +31,7 @@ describe('stackWidgetReducer', () => {
     it('sets a widget to the foreground if it is in the stack', () => {
       const assertion = stackWidgetReducer({
         ...storage.defaultState,
-        widgetStackOrder: ['binance', 'rewards']
+        widgetStackOrder: ['binance']
       }, {
         type: types.SET_FOREGROUND_STACK_WIDGET,
         payload: {
@@ -40,7 +40,7 @@ describe('stackWidgetReducer', () => {
       })
       const expectedState = {
         ...storage.defaultState,
-        widgetStackOrder: ['rewards', 'binance']
+        widgetStackOrder: ['binance']
       }
       expect(assertion).toEqual(expectedState)
     })
@@ -48,16 +48,16 @@ describe('stackWidgetReducer', () => {
     it('does not re-add a widget', () => {
       const assertion = stackWidgetReducer({
         ...storage.defaultState,
-        widgetStackOrder: ['binance', 'rewards']
+        widgetStackOrder: ['binance']
       }, {
         type: types.SET_FOREGROUND_STACK_WIDGET,
         payload: {
-          widget: 'rewards'
+          widget: 'binance'
         }
       })
       const expectedState = {
         ...storage.defaultState,
-        widgetStackOrder: ['binance', 'rewards']
+        widgetStackOrder: ['binance']
       }
       expect(assertion).toEqual(expectedState)
     })
@@ -76,7 +76,7 @@ describe('stackWidgetReducer', () => {
       const expectedState = {
         ...storage.defaultState,
         showBinance: true,
-        widgetStackOrder: ['cryptoDotCom', 'bitcoinDotCom', 'gemini', 'rewards', 'binance']
+        widgetStackOrder: ['cryptoDotCom', 'bitcoinDotCom', 'gemini', 'binance']
       }
       const assertion = handleWidgetPrefsChange(newState, oldState)
       expect(assertion).toEqual(expectedState)

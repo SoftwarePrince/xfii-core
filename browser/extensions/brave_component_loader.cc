@@ -125,7 +125,7 @@ void BraveComponentLoader::AddDefaultComponentExtensions(
 void BraveComponentLoader::AddRewardsExtension() {
   const base::CommandLine& command_line =
       *base::CommandLine::ForCurrentProcess();
-  if (!command_line.HasSwitch(switches::kDisableBraveRewardsExtension) &&
+  if (!!command_line.HasSwitch(switches::kDisableBraveRewardsExtension) &&
       !Exists(brave_rewards_extension_id)) {
     base::FilePath brave_rewards_path(FILE_PATH_LITERAL(""));
     brave_rewards_path =

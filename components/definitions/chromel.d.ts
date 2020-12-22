@@ -195,10 +195,6 @@ declare namespace chrome.cryptoDotCom {
   const onInteraction: () => void
 }
 
-declare namespace chrome.braveTogether {
-  const isSupported: (callback: (supported: boolean) => void) => {}
-}
-
 declare namespace chrome.moonpay {
   const isBitcoinDotComSupported: (callback: (supported: boolean) => void) => {}
   const onBuyBitcoinDotComCrypto: () => void
@@ -230,11 +226,6 @@ declare namespace chrome.greaselion {
   const isGreaselionExtension: (id: string, callback: (valid: boolean) => void) => {}
 }
 
-declare namespace chrome.braveToday {
-  const onClearHistory: {
-    addListener: (callback: () => any) => void
-  }
-}
 
 type BlockTypes = 'ads' | 'trackers' | 'httpUpgradableResources' | 'javascript' | 'fingerprinting'
 

@@ -131,7 +131,7 @@ IN_PROC_BROWSER_TEST_F(BraveContentBrowserClientTest, CanLoadChromeURL) {
 
   std::vector<std::string> schemes {
     "about:",
-    "brave://",
+    "xfii://",
     "chrome://",
   };
 
@@ -144,7 +144,7 @@ IN_PROC_BROWSER_TEST_F(BraveContentBrowserClientTest, CanLoadChromeURL) {
 
       EXPECT_STREQ(base::UTF16ToUTF8(browser()->location_bar_model()
                       ->GetFormattedFullURL()).c_str(),
-                   ("brave://" + page).c_str());
+                   ("xfii://" + page).c_str());
       EXPECT_STREQ(contents->GetController().GetLastCommittedEntry()
                        ->GetVirtualURL().spec().c_str(),
                    ("chrome://" + page + "/").c_str());
@@ -164,7 +164,7 @@ IN_PROC_BROWSER_TEST_F(BraveContentBrowserClientTest, CanLoadCustomBravePages) {
   };
 
   std::vector<std::string> schemes {
-    "brave://",
+    "xfii://",
     "chrome://",
   };
 
@@ -177,7 +177,7 @@ IN_PROC_BROWSER_TEST_F(BraveContentBrowserClientTest, CanLoadCustomBravePages) {
 
       EXPECT_STREQ(base::UTF16ToUTF8(browser()->location_bar_model()
                       ->GetFormattedFullURL()).c_str(),
-                   ("brave://" + page).c_str());
+                   ("xfii://" + page).c_str());
       EXPECT_STREQ(contents->GetController().GetLastCommittedEntry()
                        ->GetVirtualURL().spec().c_str(),
                    ("chrome://" + page + "/").c_str());
@@ -191,7 +191,7 @@ IN_PROC_BROWSER_TEST_F(BraveContentBrowserClientTest, CanLoadCustomBravePages) {
 IN_PROC_BROWSER_TEST_F(BraveContentBrowserClientTest, CanLoadAboutHost) {
   std::vector<std::string> schemes {
     "chrome://",
-    "brave://",
+    "xfii://",
   };
 
   for (const std::string& scheme : schemes) {
@@ -202,7 +202,7 @@ IN_PROC_BROWSER_TEST_F(BraveContentBrowserClientTest, CanLoadAboutHost) {
 
       EXPECT_STREQ(base::UTF16ToUTF8(browser()->location_bar_model()
                       ->GetFormattedFullURL()).c_str(),
-                   "brave://about");
+                   "xfii://about");
       EXPECT_STREQ(contents->GetController().GetLastCommittedEntry()
                        ->GetVirtualURL().spec().c_str(),
                    "chrome://about/");
@@ -214,7 +214,7 @@ IN_PROC_BROWSER_TEST_F(BraveContentBrowserClientTest, CanLoadAboutHost) {
 IN_PROC_BROWSER_TEST_F(BraveContentBrowserClientTest,
                            RewriteChromeSync) {
   std::vector<std::string> schemes {
-    "brave://",
+    "xfii://",
     "chrome://",
   };
 
@@ -227,7 +227,7 @@ IN_PROC_BROWSER_TEST_F(BraveContentBrowserClientTest,
 
     EXPECT_STREQ(base::UTF16ToUTF8(browser()->location_bar_model()
                                    ->GetFormattedFullURL()).c_str(),
-                 "brave://sync");
+                 "xfii://sync");
     EXPECT_STREQ(contents->GetController().GetLastCommittedEntry()
                  ->GetVirtualURL().spec().c_str(),
                  "chrome://sync/");

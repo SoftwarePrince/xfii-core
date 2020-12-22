@@ -62,20 +62,21 @@ void BraveAppMenuModel::InsertBraveMenuItems() {
                              IDC_MANAGE_EXTENSIONS,
                              IDS_SHOW_EXTENSIONS);
   }
-
+/*
   if (IsCommandIdEnabled(IDC_SHOW_BRAVE_REWARDS)) {
     InsertItemWithStringIdAt(GetIndexOfBraveRewardsItem(),
                              IDC_SHOW_BRAVE_REWARDS,
                              IDS_SHOW_BRAVE_REWARDS);
   }
-
+*/
+/*
   // Insert wallet menu after download menu.
   if (IsCommandIdEnabled(IDC_SHOW_BRAVE_WALLET)) {
     InsertItemWithStringIdAt(GetIndexOfCommandId(IDC_SHOW_DOWNLOADS) + 1,
                              IDC_SHOW_BRAVE_WALLET,
                              IDS_SHOW_BRAVE_WALLET);
   }
-
+*/
   // Insert sync menu
   if (IsCommandIdEnabled(IDC_SHOW_BRAVE_SYNC)) {
     InsertItemWithStringIdAt(GetIndexOfBraveSyncItem(),

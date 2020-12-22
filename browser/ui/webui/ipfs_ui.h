@@ -43,7 +43,7 @@ class IPFSDOMHandler : public content::WebUIMessageHandler {
   DISALLOW_COPY_AND_ASSIGN(IPFSDOMHandler);
 };
 
-// The WebUI for brave://ipfs
+// The WebUI for xfii://ipfs
 class IPFSUI : public BasicUI {
  public:
   IPFSUI(content::WebUI* web_ui, const std::string& host);

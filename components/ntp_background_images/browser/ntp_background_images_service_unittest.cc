@@ -291,7 +291,7 @@ const char kTestSuperReferral[] = R"(
       ],
       "topSites": [
         {
-          "name": "Brave",
+          "name": "XFII",
           "destinationUrl": "https://brave.com/",
           "backgroundColor": "#e22919",
           "iconUrl": "brave.png"

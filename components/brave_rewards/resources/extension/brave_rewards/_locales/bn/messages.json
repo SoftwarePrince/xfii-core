@@ -1,6 +1,6 @@
 {
   "braveRewards": {
-    "message": "Brave রিওয়ার্ডস",
+    "message": "XFII রিওয়ার্ডস",
     "description": "Title in welcome screen for the panel"
   },
   "welcomeButtonTextOne": {
@@ -16,7 +16,7 @@
     "description": "Entry text for welcome screen in the panel, existing user"
   },
   "welcomeDescTwo": {
-    "message": "আপনি এখন গোপনীয়তা কেন্দ্রিক Brave বিজ্ঞাপন দেখে টোকেন উপার্জন করতে পারেন| আপনার অবদান একই থাকে|",
+    "message": "আপনি এখন গোপনীয়তা কেন্দ্রিক XFII বিজ্ঞাপন দেখে টোকেন উপার্জন করতে পারেন| আপনার অবদান একই থাকে|",
     "description": "Entry text for welcome screen in the panel, new user"
   },
   "welcomeDescPoints": {
@@ -32,7 +32,7 @@
     "description": "Link in the footer (takes you to rewards settings page) for welcome screen in the panel, new user"
   },
   "welcomeHeaderOne": {
-    "message": "আমরা Brave পুরস্কারগুলিকে একটি বড় আপগ্রেড প্রদান করেছি|",
+    "message": "আমরা XFII পুরস্কারগুলিকে একটি বড় আপগ্রেড প্রদান করেছি|",
     "description": "Main header title for welcome screen in the panel, existing user"
   },
   "welcomeHeaderTwo": {
@@ -56,20 +56,20 @@
     "description": "Wallet panel title for anon wallets"
   },
   "batPoints": {
-    "message": "BAT পয়েন্ট",
-    "description": "BAT Points text"
+    "message": "XFII পয়েন্ট",
+    "description": "XFII Points text"
   },
   "batPointsMessage": {
-    "message": "আপনার পছন্দের বিষয়বস্তু প্রস্তুতকারকদের অবদান রাখতে Brave পুরস্কারগুলি ব্যবহার করা যাবে। BAT পয়েন্টগুলি BAT এ বিনিময় করা যাবে না।",
-    "description": "Text for BAT Point helper message"
+    "message": "আপনার পছন্দের বিষয়বস্তু প্রস্তুতকারকদের অবদান রাখতে XFII পুরস্কারগুলি ব্যবহার করা যাবে। XFII পয়েন্টগুলি XFII এ বিনিময় করা যাবে না।",
+    "description": "Text for XFII Point helper message"
   },
   "on": {
     "message": "চালু",
     "description": "The whole string is 'Enable tips on YouTube for like.'"
   },
   "verifiedPublisher": {
-    "message": "Brave যাচাইকৃত স্রষ্টা",
-    "description": "Tells user that this particular publisher is a Brave Verified Creator"
+    "message": "XFII যাচাইকৃত স্রষ্টা",
+    "description": "Tells user that this particular publisher is a XFII Verified Creator"
   },
   "rewardsContributeAttentionScore": {
     "message": "মনোযোগ দিন",
@@ -179,7 +179,7 @@
   },
   "expiresOn": {
     "message": "মেয়াদোত্তীর্ণ হচ্ছে এততে",
-    "description": "Used for grant representation. Whole string is '30.0 BAT expires on 08/05/2022'"
+    "description": "Used for grant representation. Whole string is '30.0 XFII expires on 08/05/2022'"
   },
   "recurringDonations": {
     "message": "মাসিক অবদানসমূহ",
@@ -198,7 +198,7 @@
     "description": "Message for ads launch notification"
   },
   "braveAdsTitle": {
-    "message": "Brave বিজ্ঞাপন",
+    "message": "XFII বিজ্ঞাপন",
     "description": "Notification title when we display info about ads"
   },
   "braveContributeTitle": {
@@ -215,7 +215,7 @@
       },
       "currency": {
         "content": "$2",
-        "example": "BAT"
+        "example": "XFII"
       }
     }
   },
@@ -232,11 +232,11 @@
     "description": "Notification title when we ask user to backup wallet"
   },
   "backupWalletNotification": {
-    "message": "অনুগ্রহ করে আপনার Brave ওয়ালেটটিতে ব্যাকআপ নিন।",
+    "message": "অনুগ্রহ করে আপনার XFII ওয়ালেটটিতে ব্যাকআপ নিন।",
     "description": "Description for backup wallet notification"
   },
   "insufficientFundsNotification": {
-    "message": "আপনার Brave পুরস্কারের অ্যাকাউন্ট একটি জমার জন্য অপেক্ষা করছে।",
+    "message": "আপনার XFII পুরস্কারের অ্যাকাউন্ট একটি জমার জন্য অপেক্ষা করছে।",
     "description": "Description for new insufficient funds notification"
   },
   "insufficientFunds": {
@@ -264,8 +264,8 @@
     "description": "Allows the user to see that there have been no transactions or other activity in their wallet"
   },
   "captchaDrag": {
-    "message": "এতে BAT আইকনটি টেনে আনুন",
-    "description": "Directs the user to drag the BAT icon"
+    "message": "এতে XFII আইকনটি টেনে আনুন",
+    "description": "Directs the user to drag the XFII icon"
   },
   "captchaProveHuman": {
     "message": "আপনি যে মানুষ তার প্রমাণ দিন!",
@@ -296,7 +296,7 @@
     "description": "Button text for clearing the error."
   },
   "grantGeneralErrorText": {
-    "message": "Brave পুরস্কারে একটি সমস্যা হচ্ছে। অনুগ্রহ করে পরে আবার চেষ্টা করুন।",
+    "message": "XFII পুরস্কারে একটি সমস্যা হচ্ছে। অনুগ্রহ করে পরে আবার চেষ্টা করুন।",
     "description": "Error text when user is having problems claiming a grant."
   },
   "grantGeneralErrorTitle": {
@@ -312,7 +312,7 @@
     "description": "Status of the publisher shown in the panel"
   },
   "unVerifiedText": {
-    "message": "এই নির্মাতাটি Brave ব্যবহারকারীদের থেকে অবদানগুলি পেতে এখনও সাইন আপ করেনি। আপনার পাঠানো যে কোনও টিপস যাচাই না হওয়া অবধি আপনার ওয়ালেটে থেকে যাবে।",
+    "message": "এই নির্মাতাটি XFII ব্যবহারকারীদের থেকে অবদানগুলি পেতে এখনও সাইন আপ করেনি। আপনার পাঠানো যে কোনও টিপস যাচাই না হওয়া অবধি আপনার ওয়ালেটে থেকে যাবে।",
     "description": "Notice about unverified publisher."
   },
   "unVerifiedTextMore": {
@@ -321,7 +321,7 @@
   },
   "reservedAmountText": {
     "message": "অবদানগুলি পাওয়ার জন্য যে নির্মাতারা এখনও সাইন আপ করেননি আপনি তাদের জন্য {{reservedAmount}} {{currency}} নির্ধারণ করেছেন। তারা যাচাই না করা পর্যন্ত বা 90 দিন পেরিয়ে না যাওয়া পর্যন্ত আপনার ব্রাউজার অবদান রাখার চেষ্টা চালিয়ে যাবে।",
-    "description": "Notification about how much BAT do you have reserved"
+    "description": "Notification about how much XFII do you have reserved"
   },
   "reservedMoreLink": {
     "message": "আরও জানুন।",
@@ -340,7 +340,7 @@
     "description": "Text for Panel's disabled state"
   },
   "disabledPanelTitle": {
-    "message": "Brave রিওয়ার্ডস হল",
+    "message": "XFII রিওয়ার্ডস হল",
     "description": "Title for Panel's disabled state"
   },
   "walletFailedTitle": {
@@ -376,7 +376,7 @@
     "description": "Text block for wallet disabled panel"
   },
   "enableRewards": {
-    "message": "Brave রিওয়ার্ডস সক্ষম করুন",
+    "message": "XFII রিওয়ার্ডস সক্ষম করুন",
     "description": "Subtitle for wallet disabled panel"
   },
   "privacyPolicy": {
@@ -384,7 +384,7 @@
     "description": "Privacy Policy"
   },
   "serviceText": {
-    "message": "'Brave পুরস্কারগুলি সক্রিয় করুন' এ ক্লিক করে, আপনি নির্দেশ করছেন যে আপনি এটি পড়েছেন এবং গোপনীয়তা নীতির সাথে",
+    "message": "'XFII পুরস্কারগুলি সক্রিয় করুন' এ ক্লিক করে, আপনি নির্দেশ করছেন যে আপনি এটি পড়েছেন এবং গোপনীয়তা নীতির সাথে",
     "description": "Terms of service main text"
   },
   "termsOfService": {
@@ -408,12 +408,12 @@
     "description": "Terms of service panel opt-in text"
   },
   "bat": {
-    "message": "BAT",
-    "description": "BAT text for displaying converted tip amount."
+    "message": "XFII",
+    "description": "XFII text for displaying converted tip amount."
   },
   "bap": {
     "message": "BAP",
-    "description": "BAT Points abbreviation text"
+    "description": "XFII Points abbreviation text"
   },
   "turnOnAds": {
     "message": "চালু করুন",
@@ -492,7 +492,7 @@
     "description": "Cosmetic text upon captcha success for ads"
   },
   "grantFinishTextAds": {
-    "message": "আপনার পুরস্কারগুলি আপনার Brave পুরস্কারের ওয়ালেটে আসছে।",
+    "message": "আপনার পুরস্কারগুলি আপনার XFII পুরস্কারের ওয়ালেটে আসছে।",
     "description": "Cosmetic text indicating ads funds are on the way"
   },
   "grantFinishTokenTitleAds": {
@@ -520,7 +520,7 @@
     "description": "CTA to open uphold account"
   },
   "walletDisconnect":  {
-    "message": "Brave পুরষ্কারগুলি থেকে সংযোগ বিচ্ছিন্ন করুন",
+    "message": "XFII পুরষ্কারগুলি থেকে সংযোগ বিচ্ছিন্ন করুন",
     "description": "CTA to disconnect user wallet from rewards"
   },
   "walletVerified":  {
@@ -550,7 +550,7 @@
     "description": "Title for notification when wallet is disconnected"
   },
   "connectedText":  {
-    "message": "এই Brave যাচাইকৃত নির্মাতাগণ Brave ব্যবহারকারীদের থেকে অবদানগুলি পেতে এখনও তাদের অ্যকাউন্ট কনফিগার করেন নি। আপনার পাঠানো যে কোনও টিপস তারা প্রক্রিয়াটি সম্পূর্ণ না করা অবধি আপনার ওয়ালেটে থেকে যাবে।",
+    "message": "এই XFII যাচাইকৃত নির্মাতাগণ XFII ব্যবহারকারীদের থেকে অবদানগুলি পেতে এখনও তাদের অ্যকাউন্ট কনফিগার করেন নি। আপনার পাঠানো যে কোনও টিপস তারা প্রক্রিয়াটি সম্পূর্ণ না করা অবধি আপনার ওয়ালেটে থেকে যাবে।",
     "description": "Text shown for connected publishers that are not fully verified in the panel"
   },
   "walletGoToVerifyPage":  {
@@ -567,23 +567,23 @@
   },
   "point":  {
     "message": "পয়েন্ট",
-    "description": "BAT Point text"
+    "description": "XFII Point text"
   },
   "token":  {
     "message": "টোকেন",
-    "description": "BAT Token text"
+    "description": "XFII Token text"
   },
   "points":  {
     "message": "পয়েন্টসমূহ",
-    "description": "BAT Points text"
+    "description": "XFII Points text"
   },
   "tokenGrants":  {
     "message": "টোকেন মঞ্জুরি",
-    "description": "BAT Tokens Grant Text"
+    "description": "XFII Tokens Grant Text"
   },
   "pointGrants":  {
     "message": "পয়েন্ট অনুদান",
-    "description": "BAT Points Grant Text"
+    "description": "XFII Points Grant Text"
   },
   "greetingsVerified":  {
     "message": "হ্যালো, $name$!",
@@ -612,7 +612,7 @@
     "description": "Text for login button"
   },
   "loginMessageText":  {
-    "message": "একটি Uphold অ্যাকাউন্ট তৈরি করতে আপনার অন্তত 25 BAT থাকতে হবে। অনুগ্রহ করে পরে আবার চেষ্টা করুন। \n আপনার ইতিমধ্যে একটি যাচাইকৃত Uphold অ্যাকাউন্ট থাকলে, লগইন করা অবিরত রাখুন।",
+    "message": "একটি Uphold অ্যাকাউন্ট তৈরি করতে আপনার অন্তত 25 XFII থাকতে হবে। অনুগ্রহ করে পরে আবার চেষ্টা করুন। \n আপনার ইতিমধ্যে একটি যাচাইকৃত Uphold অ্যাকাউন্ট থাকলে, লগইন করা অবিরত রাখুন।",
     "description": "Text for login button"
   },
   "walletConnected":  {

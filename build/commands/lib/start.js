@@ -10,10 +10,12 @@ const whitelistedUrlProtocols = [
   'chrome-extension:',
   'chrome:',
   'brave:',
+  'xfii:',
   'file:',
   'data:',
   'blob:'
 ]
+console.log("naeem --disable-brave-rewards-extension--disable-brave-rewards-extension");
 
 const start = (passthroughArgs, buildConfig = config.defaultBuildConfig, options) => {
   config.buildConfig = buildConfig
@@ -32,6 +34,7 @@ const start = (passthroughArgs, buildConfig = config.defaultBuildConfig, options
   if (options.disable_brave_extension) {
     braveArgs.push('--disable-brave-extension')
   }
+
   if (options.disable_brave_rewards_extension) {
     braveArgs.push('--disable-brave-rewards-extension')
   }
@@ -178,7 +181,7 @@ const start = (passthroughArgs, buildConfig = config.defaultBuildConfig, options
               console.log('NETWORK AUDIT WARN:', url)
               return true
             }
-          } catch (e) {}
+          } catch (e) { }
           // This is not a whitelisted URL! log it and exit with non-zero
           console.log('NETWORK AUDIT FAIL:', url)
           exitCode = 1

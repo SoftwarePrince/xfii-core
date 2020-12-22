@@ -16,7 +16,6 @@ import NewTabPage from '../containers/newTab'
 import { getActionsForDispatch } from '../api/getActions'
 import store from '../store'
 import { getNewTabData, getGridSitesData } from './default/data/storybookState'
-import getTodayState from './default/data/todayStorybookState'
 
 const doNothingDispatch: Dispatch = (action: any) => action
 
@@ -75,23 +74,13 @@ storiesOf('New Tab/Containers', module)
     const state = store.getState()
     const newTabData = getNewTabData(state.newTabData)
     const gridSitesData = getGridSitesData(state.gridSitesData)
-    const todayState = getTodayState()
     return (
       <NewTabPage
         newTabData={newTabData}
-        todayData={todayState}
         gridSitesData={gridSitesData}
         actions={getActions()}
         saveShowBackgroundImage={doNothing}
         saveShowStats={doNothing}
-        saveShowToday={doNothing}
-        saveShowRewards={doNothing}
-        saveShowBinance={doNothing}
-        saveShowTogether={doNothing}
-        saveShowGemini={doNothing}
-        saveShowBitcoinDotCom={doNothing}
-        saveShowCryptoDotCom={doNothing}
-        saveBrandedWallpaperOptIn={doNothing}
       />
     )
   })

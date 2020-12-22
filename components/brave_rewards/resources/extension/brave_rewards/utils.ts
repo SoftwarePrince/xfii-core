@@ -139,7 +139,7 @@ export const handleUpholdLink = (balance: RewardsExtension.Balance, externalWall
   let link = externalWallet.verifyUrl
 
   if (!externalWallet || (externalWallet && externalWallet.status === 0)) {
-    link = 'brave://rewards/#verify'
+    link = 'xfii://rewards/#verify'
   }
 
   if (balance.total < 25) {

@@ -35,7 +35,7 @@ const locale = {
   donationTotal: 'Total tips this month',
   rewardsDisabledDescOne: 'With conventional browsers, you pay to browse the web by viewing ads with your valuable attention, spending your valuable time downloading invasive ad technology, that transmits your valuable private data to advertisers — without your consent.',
   rewardsDisabledDescTwo: 'Today, Brave welcomes you to the new internet. One where your time is valued, your personal data is kept private, and you actually get paid for your attention.',
-  whyBraveRewards: 'Why Brave Rewards?'
+  whyBraveRewards: 'Why XFII Rewards?'
 }
 
 export default locale

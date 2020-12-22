@@ -176,7 +176,7 @@
       }, {
         "name": "loadUI",
         "type": "function",
-        "description": "Called when brave://wallet WebUI wants to load the real UI",
+        "description": "Called when xfii://wallet WebUI wants to load the real UI",
         "parameters": [
           {
             "name": "cb",

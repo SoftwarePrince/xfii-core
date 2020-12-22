@@ -477,7 +477,7 @@ def is_translateable_string(grd_file_path, message_tag):
     if message_tag.get('translateable') != 'false':
         return True
     # Check for exceptions that aren't translateable in Chromium, but are made
-    # to be translateable in Brave. These can be found in the main function in
+    # to be translateable in XFII. These can be found in the main function in
     # brave/script/chromium-rebase-l10n.py
     grd_file_name = os.path.basename(grd_file_path)
     if grd_file_name == 'chromium_strings.grd':
@@ -603,7 +603,7 @@ def get_xtb_files(grd_file_path):
 
 
 def get_original_grd(src_root, grd_file_path):
-    """Obtains the Chromium GRD file for a specified Brave GRD file."""
+    """Obtains the Chromium GRD file for a specified XFII GRD file."""
     # TODO: consider passing this mapping into the script from l10nUtil.js
     grd_file_name = os.path.basename(grd_file_path)
     if grd_file_name == 'components_brave_strings.grd':
@@ -646,16 +646,16 @@ def get_transifex_string_hash(string_name):
 
 
 def braveify(string_value):
-    """Replace Chromium branded strings with Brave beranded strings."""
-    return (string_value.replace('Chrome', 'Brave')
-            .replace('Chromium', 'Brave')
-            .replace('Google', 'Brave')
-            .replace('Brave Docs', 'Google Docs')
-            .replace('Brave Drive', 'Google Drive')
-            .replace('Brave Play', 'Google Play')
-            .replace('Brave Safe', 'Google Safe')
-            .replace('Sends URLs of some pages you visit to Brave', 'Sends URLs of some pages you visit to Google')
-            .replace('Brave Account', 'Brave sync chain'))
+    """Replace Chromium branded strings with XFII beranded strings."""
+    return (string_value.replace('Chrome', 'XFII')
+            .replace('Chromium', 'XFII')
+            .replace('Google', 'XFII')
+            .replace('XFII Docs', 'Google Docs')
+            .replace('XFII Drive', 'Google Drive')
+            .replace('XFII Play', 'Google Play')
+            .replace('XFII Safe', 'Google Safe')
+            .replace('Sends URLs of some pages you visit to XFII', 'Sends URLs of some pages you visit to Google')
+            .replace('XFII Account', 'XFII sync chain'))
 
 
 def upload_missing_translation_to_transifex(source_string_path, lang_code,

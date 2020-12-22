@@ -179,7 +179,7 @@ bool BraveActionsContainer::ShouldAddAction(const std::string& id) const {
 bool BraveActionsContainer::ShouldAddBraveRewardsAction() const {
   const base::CommandLine& command_line =
       *base::CommandLine::ForCurrentProcess();
-  if (command_line.HasSwitch(switches::kDisableBraveRewardsExtension)) {
+  if (!command_line.HasSwitch(switches::kDisableBraveRewardsExtension)) {
     return false;
   }
 

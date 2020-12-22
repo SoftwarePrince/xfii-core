@@ -46,7 +46,7 @@ net::NetworkTrafficAnnotationTag GetNetworkTrafficAnnotationTag() {
           "This service is used to communicate with IPFS daemon "
           "on behalf of the user interacting with the actions in brvae://ipfs."
         trigger:
-          "Triggered by actions in brave://ipfs."
+          "Triggered by actions in xfii://ipfs."
         data:
           "Options of the commands."
         destination: WEBSITE
@@ -54,7 +54,7 @@ net::NetworkTrafficAnnotationTag GetNetworkTrafficAnnotationTag() {
       policy {
         cookies_allowed: NO
         setting:
-          "You can enable or disable this feature in brave://settings."
+          "You can enable or disable this feature in xfii://settings."
         policy_exception_justification:
           "Not implemented."
       }

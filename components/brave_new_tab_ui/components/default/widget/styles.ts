@@ -138,31 +138,9 @@ export const StyledWidgetButton = styled<WidgetButtonProps, 'button'>('button')`
   }
 `
 
-export const StyledWidgetLink = styled<WidgetButtonProps, 'a'>('a')`
-  border-style: none;
-  background: transparent;
-  padding: 0;
-  display: flex;
-  height: 30px;
-  width: 100%;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  outline-color: #FF7654;
-  outline-width: 2px;
-  outline-offset: -3px;
-  cursor: pointer;
-  text-decoration: none;
-
-  &:hover {
-    background-color: ${p => p.theme.color.contextMenuHoverBackground};
-    color: ${p => p.theme.color.contextMenuHoverForeground};
-  }
-`
 
 interface WidgetIconProps {
   isRefresh?: boolean
-  isBinance?: boolean
 }
 
 export const StyledEllipsis = styled<WidgetVisibilityProps, 'div'>('div')`
@@ -183,8 +161,6 @@ export const StyledEllipsis = styled<WidgetVisibilityProps, 'div'>('div')`
 export const StyledWidgetIcon = styled<WidgetIconProps, 'div'>('div')`
   height: 13px;
   width: 13px;
-  margin: ${p => p.isBinance ? '0px 13px 0 12px' : '-7px 15px 0 10px'};
-  margin-left: ${p => p.isRefresh ? '13px' : p.isBinance ? '12px' : '10px'};
 
   svg {
     fill: ${p => p.theme.color.contextMenuForeground};

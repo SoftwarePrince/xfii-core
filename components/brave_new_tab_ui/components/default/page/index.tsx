@@ -29,15 +29,12 @@ type AppProps = {
 type PageProps = {
   showClock: boolean
   showStats: boolean
-  showRewards: boolean
-  showBinance: boolean
-  showTogether: boolean
   showTopSites: boolean
   showBrandedWallpaper: boolean
 } & HasImageProps
 
 function getItemRowCount (p: PageProps): number {
-  let right = (p.showClock ? 1 : 0) + (p.showRewards ? 2 : 0)
+  let right = (p.showClock ? 1 : 0) 
   let left = (p.showStats ? 1 : 0) + (p.showTopSites ? 1 : 0)
   // Has space for branded logo to sit next to something on right?
   if (p.showBrandedWallpaper && left >= right) {
@@ -185,6 +182,7 @@ export const GridItemWidgetStack = styled('section')`
 
 export const GridItemTopSites = styled('section')`
   grid-column: 1 / span 2;
+  min-height: calc(100vh - 220px);
   ${singleColumnSmallViewport}
 `
 
@@ -229,13 +227,6 @@ export const GridItemNavigation = styled('section')`
   }
 `
 
-export const GridItemNavigationBraveToday = styled<{}, 'div'>('div')`
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translate(-50%, 0);
-  margin: 0 auto;
-`
 
 export const Footer = styled<{}, 'footer'>('footer')`
   /* Child items are primary Grid items and can slot in to free spaces,
