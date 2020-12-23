@@ -47,6 +47,15 @@ function shouldShowBrandedWallpaperData (shouldShow: boolean) {
   return dummyBrandedWallpaper
 }
 
+function getWidgetStackOrder (firstWidget: string): NewTab.StackWidget[] {
+  switch (firstWidget) {
+    case 'together':
+      return ['rewards', 'binance', 'together']
+    default:
+      return ['together', 'binance', 'rewards']
+  }
+}
+
 export const getNewTabData = (state: NewTab.State = defaultState): NewTab.State => ({
   ...state,
   brandedWallpaperData: shouldShowBrandedWallpaperData(
@@ -57,15 +66,23 @@ export const getNewTabData = (state: NewTab.State = defaultState): NewTab.State 
     generateStaticImages(images),
     generateStaticImages(images)['SpaceX']
   ),
-  showBackgroundImage: boolean('Show background image?', true),
+  showBackgroundImage: boolean('Show background image?', false),
   showStats: boolean('Show stats?', true),
+  showToday: boolean('Show today?', true),
   showClock: boolean('Show clock?', true),
   showTopSites: boolean('Show top sites?', true),
+  showRewards: boolean('Show rewards?', true),
+  showTogether: boolean('Show together?', true),
+  togetherSupported: boolean('Together supported?', true),
+  geminiSupported: boolean('Gemini Supported?', true),
+  cryptoDotComSupported: boolean('Crypto.com supported?', true),
+  showBinance: boolean('Show Binance?', true),
+  isBraveTodayIntroDismissed: boolean('Brave Today intro dismissed?', false),
   textDirection: select('Text direction', { ltr: 'ltr', rtl: 'rtl' } , 'ltr'),
   stats: {
     ...state.stats,
     adsBlockedStat: number('Number of blocked items', 1337),
-   // httpsUpgradesStat: number('Number of HTTPS upgrades', 1337)
+    httpsUpgradesStat: number('Number of HTTPS upgrades', 1337)
   },
   // TODO(petemill): Support binance state when binance can be included without chrome.* APIs
   // binanceState: {
@@ -73,7 +90,7 @@ export const getNewTabData = (state: NewTab.State = defaultState): NewTab.State 
   //   binanceSupported: boolean('Binance supported?', true)
   // },
   initialDataLoaded: true,
- // widgetStackOrder: getWidgetStackOrder(select('First widget', ['together'], 'rewards'))
+  widgetStackOrder: getWidgetStackOrder(select('First widget', ['together', 'rewards'], 'rewards'))
 })
 
 export const getGridSitesData = (

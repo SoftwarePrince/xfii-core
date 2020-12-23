@@ -2,7 +2,7 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
  * You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-declare namespace chrome {
+ declare namespace chrome {
   function getVariableValue (variable: string): string
   function setVariableValue (variable: string, value: any): void
   function send (stat: string, args?: any[]): void
@@ -195,11 +195,8 @@ declare namespace chrome.cryptoDotCom {
   const onInteraction: () => void
 }
 
-declare namespace chrome.moonpay {
-  const isBitcoinDotComSupported: (callback: (supported: boolean) => void) => {}
-  const onBuyBitcoinDotComCrypto: () => void
-  const onInteractionBitcoinDotCom: () => void
-  const getBitcoinDotComInteractions: (callback: (interactions: Record<string, string>) => void) => {}
+declare namespace chrome.braveTogether {
+  const isSupported: (callback: (supported: boolean) => void) => {}
 }
 
 declare namespace chrome.rewardsNotifications {
@@ -226,6 +223,11 @@ declare namespace chrome.greaselion {
   const isGreaselionExtension: (id: string, callback: (valid: boolean) => void) => {}
 }
 
+declare namespace chrome.braveToday {
+  const onClearHistory: {
+    addListener: (callback: () => any) => void
+  }
+}
 
 type BlockTypes = 'ads' | 'trackers' | 'httpUpgradableResources' | 'javascript' | 'fingerprinting'
 

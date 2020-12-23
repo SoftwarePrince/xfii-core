@@ -1,11 +1,11 @@
 {
   "version": "1.0.0",
-  "name": "XFII Rewards",
+  "name": "XFII Market",
   "manifest_version": 2,
   "description": "XFII Rewards Extension",
   "default_locale": "en_US",
   "incognito": "not_allowed",
-  "background" : {
+  "background": {
     "scripts": ["out/brave_rewards_panel_background.bundle.js"]
   },
   "permissions": [

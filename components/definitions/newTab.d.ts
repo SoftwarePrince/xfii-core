@@ -59,7 +59,7 @@ declare namespace NewTab {
     url: string
   }
 
-  export type StackWidget =  'binance' | 'together' | 'gemini' | 'bitcoinDotCom' | 'cryptoDotCom' | ''
+  export type StackWidget = 'rewards' | 'binance' | 'together' | 'gemini' | 'bitcoinDotCom' | 'cryptoDotCom' | ''
 
   export interface GridSitesState {
     removedSites: Site[]
@@ -71,14 +71,44 @@ declare namespace NewTab {
     showEmptyPage: boolean
   }
 
-
-  export interface PersistentState {
-    showEmptyPage: boolean
+  export interface RewardsState {
+    rewardsState: RewardsWidgetState
   }
 
-  export interface EphemeralState {
+  export interface PersistentState {
+    togetherSupported: boolean
+    geminiSupported: boolean
+    binanceSupported: boolean
+    bitcoinDotComSupported: boolean
+    cryptoDotComSupported: boolean
+    showEmptyPage: boolean
+    rewardsState: RewardsWidgetState
+    currentStackWidget: StackWidget
+    removedStackWidgets: StackWidget[]
+    widgetStackOrder: StackWidget[]
+    savedWidgetStackOrder: StackWidget[]
+    binanceState: BinanceWidgetState
+    geminiState: GeminiWidgetState
+    cryptoDotComState: CryptoDotComWidgetState
+  }
+
+  export type Preferences = {
+    showBackgroundImage: boolean
+    brandedWallpaperOptIn: boolean
+    showStats: boolean
+    showToday: boolean
+    showClock: boolean
+    clockFormat: string
+    showTopSites: boolean
+    showRewards: boolean
+    isBraveTodayIntroDismissed: boolean
+    isBrandedWallpaperNotificationDismissed: boolean
+  }
+
+  export type EphemeralState = Preferences & {
     initialDataLoaded: boolean
     textDirection: string
+    featureFlagBraveNTPSponsoredImagesWallpaper: boolean
     isIncognito: boolean
     useAlternativePrivateSearchEngine: boolean
     torCircuitEstablished: boolean,
@@ -89,17 +119,28 @@ declare namespace NewTab {
     gridLayoutSize?: 'small'
     showGridSiteRemovedNotification?: boolean
     showBackgroundImage: boolean
-    showStats: boolean
-    showClock: boolean
-    clockFormat: string
-    showTopSites: boolean
     customLinksEnabled: boolean
-    isBrandedWallpaperNotificationDismissed: boolean
+    showTogether: boolean
+    showBinance: boolean
+    showGemini: boolean
+    showBitcoinDotCom: boolean
+    showCryptoDotCom: boolean,
     stats: Stats,
     brandedWallpaperData?: BrandedWallpaper
   }
 
- 
+  export interface RewardsWidgetState {
+    adsEstimatedEarnings: number
+    adsSupported?: boolean
+    balance: RewardsBalance
+    dismissedNotifications: string[]
+    enabledAds: boolean
+    promotions: Promotion[]
+    parameters: RewardsParameters
+    onlyAnonWallet: boolean
+    totalContribution: number
+  }
+
   export interface BinanceWidgetState {
     userTLD: BinanceTLD
     initialFiat: string
@@ -154,6 +195,31 @@ declare namespace NewTab {
 
   export type BinanceTLD = 'us' | 'com'
 
+  export const enum RewardsResult {
+    LEDGER_OK = 0,
+    LEDGER_ERROR = 1,
+    NO_PUBLISHER_STATE = 2,
+    NO_LEDGER_STATE = 3,
+    INVALID_PUBLISHER_STATE = 4,
+    INVALID_LEDGER_STATE = 5,
+    CAPTCHA_FAILED = 6,
+    NO_PUBLISHER_LIST = 7,
+    TOO_MANY_RESULTS = 8,
+    NOT_FOUND = 9,
+    REGISTRATION_VERIFICATION_FAILED = 10,
+    BAD_REGISTRATION_RESPONSE = 11,
+    WALLET_CREATED = 12,
+    WALLET_CORRUPT = 17
+  }
+
+  export interface RewardsBalanceReport {
+    ads: number
+    contribute: number
+    monthly: number
+    grant: number
+    tips: number
+  }
+
   export enum PromotionTypes {
     UGP = 0,
     ADS = 1
@@ -167,6 +233,16 @@ declare namespace NewTab {
   export interface Promotion {
     type: PromotionTypes
     promotionId: string
+  }
+
+  export interface RewardsBalance {
+    total: number
+    wallets: Record<string, number>
+  }
+
+  export interface RewardsParameters {
+    rate: number
+    monthlyTipChoices: number[]
   }
 
   export interface DefaultSuperReferralTopSite {

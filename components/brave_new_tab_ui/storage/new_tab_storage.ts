@@ -11,14 +11,29 @@ export const keyName = 'new-tab-data'
 export const defaultState: NewTab.State = {
   initialDataLoaded: false,
   textDirection: window.loadTimeData.getString('textdirection'),
+  featureFlagBraveNTPSponsoredImagesWallpaper: window.loadTimeData.getBoolean('featureFlagBraveNTPSponsoredImagesWallpaper'),
   showBackgroundImage: false,
   showStats: false,
+  showToday: false,
   showClock: false,
   clockFormat: '',
   showTopSites: false,
   customLinksEnabled: false,
+  showRewards: false,
+  showTogether: false,
+  showBinance: false,
+  showGemini: false,
+  showBitcoinDotCom: false,
+  showCryptoDotCom: false,
+  brandedWallpaperOptIn: false,
   isBrandedWallpaperNotificationDismissed: true,
+  isBraveTodayIntroDismissed: false,
   showEmptyPage: false,
+  togetherSupported: false,
+  geminiSupported: false,
+  binanceSupported: false,
+  bitcoinDotComSupported: false,
+  cryptoDotComSupported: false,
   isIncognito: chrome.extension.inIncognitoContext,
   useAlternativePrivateSearchEngine: false,
   torCircuitEstablished: false,
@@ -31,8 +46,77 @@ export const defaultState: NewTab.State = {
     bandwidthSavedStat: 0,
     fingerprintingBlockedStat: 0
   },
-
-
+  rewardsState: {
+    adsEstimatedEarnings: 0,
+    balance: {
+      total: 0,
+      wallets: {}
+    },
+    dismissedNotifications: [],
+    enabledAds: false,
+    adsSupported: false,
+    promotions: [],
+    onlyAnonWallet: false,
+    totalContribution: 0.0,
+    parameters: {
+      rate: 0,
+      monthlyTipChoices: []
+    }
+  },
+  currentStackWidget: '',
+  removedStackWidgets: [],
+  // Order is ascending, with last entry being in the foreground
+  widgetStackOrder: ['cryptoDotCom', 'binance', 'gemini', 'rewards'],
+  savedWidgetStackOrder: [],
+  binanceState: {
+    userTLD: 'com',
+    initialFiat: 'USD',
+    initialAmount: '',
+    initialAsset: 'BTC',
+    userTLDAutoSet: false,
+    hideBalance: true,
+    binanceClientUrl: '',
+    userAuthed: false,
+    authInProgress: false,
+    btcBalanceValue: '0.00',
+    accountBalances: {},
+    assetBTCValues: {},
+    assetBTCVolumes: {},
+    assetUSDValues: {},
+    btcPrice: '0.00',
+    btcVolume: '0',
+    assetDepositInfo: {},
+    assetDepoitQRCodeSrcs: {},
+    convertAssets: {},
+    accountBTCValue: '0.00',
+    accountBTCUSDValue: '0.00',
+    disconnectInProgress: false,
+    authInvalid: false,
+    selectedView: 'summary',
+    depositInfoSaved: false
+  },
+  geminiState: {
+    geminiClientUrl: '',
+    userAuthed: false,
+    authInProgress: false,
+    tickerPrices: {},
+    selectedView: 'balance',
+    assetAddresses: {},
+    assetAddressQRCodes: {},
+    hideBalance: true,
+    accountBalances: {},
+    disconnectInProgress: false,
+    authInvalid: false
+  },
+  cryptoDotComState: {
+    optInTotal: false,
+    optInBTCPrice: false,
+    optInMarkets: false,
+    tickerPrices: {},
+    losersGainers: {},
+    supportedPairs: {},
+    charts: []
+  }
 }
 
 if (chrome.extension.inIncognitoContext) {
@@ -43,10 +127,54 @@ if (chrome.extension.inIncognitoContext) {
 // For users upgrading to the new list based widget stack state,
 // a list in the current format will need to be generated based on their
 // previous configuration.
+const getMigratedWidgetOrder = (state: NewTab.State) => {
+  const {
+    showRewards,
+    showBinance,
+    currentStackWidget
+  } = state
 
+  if (!showRewards && !showBinance) {
+    return {
+      widgetStackOrder: [],
+      removedStackWidgets: ['rewards', 'binance']
+    }
+  }
+
+  if (showRewards && !showBinance) {
+    return {
+      widgetStackOrder: ['rewards'],
+      removedStackWidgets: ['binance']
+    }
+  }
+
+  if (!showRewards && showBinance) {
+    return {
+      widgetStackOrder: ['binance'],
+      removedStackWidgets: ['rewards']
+    }
+  }
+
+  const widgetStackOrder = []
+  const nonCurrentWidget = currentStackWidget === 'rewards'
+    ? 'binance'
+    : 'rewards'
+
+  widgetStackOrder.push(currentStackWidget)
+  widgetStackOrder.unshift(nonCurrentWidget)
+
+  return {
+    widgetStackOrder,
+    removedStackWidgets: []
+  }
+}
 
 export const migrateStackWidgetSettings = (state: NewTab.State) => {
   // Migrating to the new stack widget data format
+  const { widgetStackOrder, removedStackWidgets } = getMigratedWidgetOrder(state)
+  state.widgetStackOrder = widgetStackOrder as NewTab.StackWidget[]
+  state.removedStackWidgets = removedStackWidgets as NewTab.StackWidget[]
+  state.currentStackWidget = ''
   return state
 }
 
@@ -54,13 +182,43 @@ export const migrateStackWidgetSettings = (state: NewTab.State) => {
 // the others, and not re-added unecessarily if removed
 // at one point.
 export const addNewStackWidget = (state: NewTab.State) => {
+  defaultState.widgetStackOrder.map((widget: NewTab.StackWidget) => {
+    if (!state.widgetStackOrder.includes(widget) &&
+        !state.removedStackWidgets.includes(widget)) {
+      state.widgetStackOrder.unshift(widget)
+    }
+  })
   return state
 }
 
 // Replaces any stack widgets that were improperly removed
 // as a result of https://github.com/brave/brave-browser/issues/10067
 export const replaceStackWidgets = (state: NewTab.State) => {
-
+  const {
+    showBinance,
+    showRewards,
+    showTogether,
+    togetherSupported,
+    binanceSupported
+  } = state
+  const displayLookup = {
+    'rewards': {
+      display: showRewards
+    },
+    'binance': {
+      display: binanceSupported && showBinance
+    },
+    'together': {
+      display: togetherSupported && showTogether
+    }
+  }
+  for (const key in displayLookup) {
+    const widget = key as NewTab.StackWidget
+    if (!state.widgetStackOrder.includes(widget) &&
+        displayLookup[widget].display) {
+      state.widgetStackOrder.unshift(widget)
+    }
+  }
   return state
 }
 
@@ -68,6 +226,18 @@ const cleanData = (state: NewTab.State) => {
   // We need to disable linter as we defined in d.ts that this values are number,
   // but we need this check to covert from old version to a new one
   /* tslint:disable */
+  if (typeof state.rewardsState.adsEstimatedEarnings === 'string') {
+    state.rewardsState.adsEstimatedEarnings = 0.0
+  }
+
+  if (typeof state.rewardsState.totalContribution === 'string') {
+    state.rewardsState.totalContribution = 0.0
+  }
+  /* tslint:enable */
+
+  if (!state.rewardsState.parameters) {
+    state.rewardsState.parameters = defaultState.rewardsState.parameters
+  }
 
   return state
 }
@@ -93,5 +263,20 @@ export const load = (): NewTab.State => {
 }
 
 export const debouncedSave = debounce<NewTab.State>((data: NewTab.State) => {
-
+  if (data) {
+    const dataToSave = {
+      togetherSupported: data.togetherSupported,
+      binanceSupported: data.binanceSupported,
+      geminiSupported: data.geminiSupported,
+      bitcoinDotComSupported: data.bitcoinDotComSupported,
+      rewardsState: data.rewardsState,
+      binanceState: data.binanceState,
+      geminiState: data.geminiState,
+      cryptoDotComState: data.cryptoDotComState,
+      removedStackWidgets: data.removedStackWidgets,
+      widgetStackOrder: data.widgetStackOrder,
+      savedWidgetStackOrder: data.savedWidgetStackOrder
+    }
+    window.localStorage.setItem(keyName, JSON.stringify(dataToSave))
+  }
 }, 50)

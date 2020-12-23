@@ -376,7 +376,7 @@
     "description": "Text block for wallet disabled panel"
   },
   "enableRewards": {
-    "message": "تمكين مكافآت Brave",
+    "message": "تمكين مكافآت XFII",
     "description": "Subtitle for wallet disabled panel"
   },
   "privacyPolicy": {
@@ -499,39 +499,39 @@
     "message": "مبلغ مكافأتك",
     "description": "Token title on success screen for ads"
   },
-  "rewardsPanelTextVerify":  {
+  "rewardsPanelTextVerify": {
     "message": "تحقق",
     "description": "CTA in the footer to verify"
   },
-  "walletButtonDisconnected":  {
+  "walletButtonDisconnected": {
     "message": "قُطع الاتصال",
     "description": "CTA status button"
   },
-  "walletButtonUnverified":  {
+  "walletButtonUnverified": {
     "message": "تحقق من المحفظة",
     "description": "CTA to verify wallet in the wallet "
   },
-  "walletButtonVerified":  {
+  "walletButtonVerified": {
     "message": "تمَّ التحقق من المحفظة",
     "description": "Displayed in wallet that tells users that he is verified"
   },
-  "walletGoToUphold":  {
+  "walletGoToUphold": {
     "message": "الانتقال إلى حساب Uphold الخاص بي",
     "description": "CTA to open uphold account"
   },
-  "walletDisconnect":  {
+  "walletDisconnect": {
     "message": "قطع الاتصال بـ Brave Rewards",
     "description": "CTA to disconnect user wallet from rewards"
   },
-  "walletVerified":  {
+  "walletVerified": {
     "message": "محقَّق",
     "description": "Status button that tells user that he is verified"
   },
-  "walletVerifiedNotification":  {
+  "walletVerifiedNotification": {
     "message": "تم التحقق من محفظتك!",
     "description": "Title for notification when wallet becomes verified"
   },
-  "walletVerifiedTextNotification":  {
+  "walletVerifiedTextNotification": {
     "message": "تهانينًا! تم التحقق من محفظة $name$ الخاصة بك بنجاح وتجهيزها لإضافة وسحب الرصيد.",
     "description": "Title for notification when wallet becomes verified",
     "placeholders": {
@@ -541,19 +541,19 @@
       }
     }
   },
-  "walletDisconnectedNotification":  {
+  "walletDisconnectedNotification": {
     "message": "يا للأسف. لا يمكن الوصول إلى بمحفظتك.",
     "description": "Title for notification when wallet is disconnected."
   },
-  "walletDisconnectedTextNotification":  {
+  "walletDisconnectedTextNotification": {
     "message": "لا داعي للقلق. يمكن أن يحدث هذا لمجموعة متنوعة من الأسباب الأمنية. إعادة توصيل محفظتك سوف يحل هذه المشكلة.",
     "description": "Title for notification when wallet is disconnected"
   },
-  "connectedText":  {
+  "connectedText": {
     "message": "لم يقم مبدع Brave المُتحقق منه هذا بعد بتكوين حسابه لتلقي مساهمات من مستخدمي Brave. ستبقى أي أموال ترسلها في محفظتك حتى يكمل هذه العملية.",
     "description": "Text shown for connected publishers that are not fully verified in the panel"
   },
-  "walletGoToVerifyPage":  {
+  "walletGoToVerifyPage": {
     "message": "أكمل التحقق من المحفظة",
     "description": "CTA for completing wallet verification"
   },
@@ -561,31 +561,31 @@
     "message": "تعيين...",
     "description": "Button text for setting monthly contribution"
   },
-  "tokens":  {
+  "tokens": {
     "message": "الرموز المميزة",
     "description": "Standard tokens text"
   },
-  "point":  {
+  "point": {
     "message": "نقطة",
     "description": "BAT Point text"
   },
-  "token":  {
+  "token": {
     "message": "عملة رمزية",
     "description": "BAT Token text"
   },
-  "points":  {
+  "points": {
     "message": "النقاط",
     "description": "BAT Points text"
   },
-  "tokenGrants":  {
+  "tokenGrants": {
     "message": "منح العملة الرمزية",
     "description": "BAT Tokens Grant Text"
   },
-  "pointGrants":  {
+  "pointGrants": {
     "message": "منح النقاط",
     "description": "BAT Points Grant Text"
   },
-  "greetingsVerified":  {
+  "greetingsVerified": {
     "message": "مرحباً، $name$!",
     "description": "Greetings for external wallet popup",
     "placeholders": {
@@ -595,35 +595,35 @@
       }
     }
   },
-  "cancel":  {
+  "cancel": {
     "message": "إلغاء",
     "description": "Text for cancel button"
   },
-  "changeAmount":  {
+  "changeAmount": {
     "message": "تغيير المبلغ",
     "description": "Button text for changing monthly contribution amount"
   },
-  "login":  {
+  "login": {
     "message": "تسجيل الدخول",
     "description": "Text for login button"
   },
-  "loginMessageTitle":  {
+  "loginMessageTitle": {
     "message": "تفعيل المحفظة يتيح لك إدارة أموالك بشكل أكثر كفاءة.",
     "description": "Text for login button"
   },
-  "loginMessageText":  {
+  "loginMessageText": {
     "message": "يجب أن يكون لديك عدد 25 عملة BAT كحد أدنى لإنشاء حساب Uphold. يُرجى المحاولة مرة أخرى في وقت لاحق.\n  إذا كان لديك بالفعل حساب Uphold قد تم التحقق منه، فتابع تسجيل الدخول.",
     "description": "Text for login button"
   },
-  "walletConnected":  {
+  "walletConnected": {
     "message": "متصل",
     "description": "Status button that tells user that he is connected"
   },
-  "walletPending":  {
+  "walletPending": {
     "message": "معلَّق",
     "description": "Status button that tells user that he is currently pending"
   },
-  "walletVerificationNote3":  {
+  "walletVerificationNote3": {
     "message": "ملاحظة: ستكون معاملاتك مرئية لـ Uphold بمجرد منح الإذن؛ على سبيل المثال، سيتمكنون من رؤية المرسل إليه ومبالغ الإكراميات التي تدفعها.",
     "description": "Displayed in login modal for uphold"
   }

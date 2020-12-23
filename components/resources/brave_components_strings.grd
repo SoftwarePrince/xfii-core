@@ -205,7 +205,7 @@
       <message name="IDS_BRAVE_NEW_TAB_TOP_SITES" desc="Top Sites title">top sites</message>
       <message name="IDS_BRAVE_NEW_TAB_STATS" desc="XFII Stats title">XFII Stats</message>
       <message name="IDS_BRAVE_NEW_TAB_CLOCK" desc="Clock title">clock</message>
-      <message name="IDS_BRAVE_NEW_TAB_REWARDS" desc="XFII Rewards Title">XFII Rewards</message>
+      <message name="IDS_BRAVE_NEW_TAB_REWARDS" desc="XFII Rewards Title">XFII</message>
       <message name="IDS_BRAVE_NEW_TAB_BACKGROUND_IMAGE" desc="Background image title">Background Image</message>
       <message name="IDS_BRAVE_NEW_TAB_SETTINGS_BACK" desc="Navigate back to the previous settings section">
         Back
@@ -251,7 +251,7 @@
       <message name="IDS_BRAVE_NEW_TAB_BACKGROUND_IMG_TAB" desc="Background image title">Background Image</message>
       <message name="IDS_BRAVE_NEW_TAB_WIDGET_ADD" desc="Add Widget Text">Add</message>
       <message name="IDS_BRAVE_NEW_TAB_WIDGET_HIDE" desc="Hide Widget Text">Hide</message>
-      <message name="IDS_BRAVE_NEW_TAB_BRAVE_REWARDS_TITLE" desc="">XFII Rewards</message>
+      <message name="IDS_BRAVE_NEW_TAB_BRAVE_REWARDS_TITLE" desc="">XFII</message>
       <message name="IDS_BRAVE_NEW_TAB_REWARDS_WIDGET_DESC" desc="Rewards widget description">Earn tokens for watching privacy-respecting ads.</message>
       <message name="IDS_BRAVE_NEW_TAB_BINANCE_WIDGET_DESC" desc="Binance widget description">Trade Crypto on Binance directly in your browser.</message>
       <message name="IDS_BRAVE_NEW_TAB_GEMINI_WIDGET_DESC" desc="Gemini widget description">Trade Crypto on Gemini directly in your browser.</message>
@@ -305,9 +305,9 @@
       <message name="IDS_BRAVE_WELCOME_PAGE_MAIN_TITLE" desc="Welcome message title">BRINGING PRIVACY TO DEFI</message>
       <message name="IDS_BRAVE_WELCOME_PAGE_MAIN_DESC" desc="Welcome message description">For the first time, you will be able to swap, add PL and send transations 100% anonymously</message>
       <message name="IDS_BRAVE_WELCOME_PAGE_MAIN_BUTTON" desc="Button that moves to the next welcome screen">Let's go</message>
-      <message name="IDS_BRAVE_WELCOME_PAGE_REWARDS_TITLE" desc="Welcome message title for XFII Rewards">XFII Rewards</message>
+      <message name="IDS_BRAVE_WELCOME_PAGE_REWARDS_TITLE" desc="Welcome message title for XFII Rewards">XFII Market</message>
       <message name="IDS_BRAVE_WELCOME_PAGE_REWARDS_DESC" desc="Explainer text about XFII Rewards">Earn tokens by viewing privacy-respecting ads and support your favorite sites and creators by default.</message>
-      <message name="IDS_BRAVE_WELCOME_PAGE_REWARDS_BUTTON" desc="Button to enable XFII Rewards from the welcome page">Start using XFII Rewards</message>
+      <message name="IDS_BRAVE_WELCOME_PAGE_REWARDS_BUTTON" desc="Button to enable XFII Rewards from the welcome page">Buy XFII</message>
       <message name="IDS_BRAVE_WELCOME_PAGE_IMPORT_TITLE" desc="Welcome message title for import from another browser">Import bookmarks and settings</message>
       <message name="IDS_BRAVE_WELCOME_PAGE_IMPORT_DESC" desc="Explainer text about importing from another browser">Set up your usual browsing environment by importing bookmarks and settings from your old browser. Advanced import options can be found in Settings.</message>
       <message name="IDS_BRAVE_WELCOME_PAGE_IMPORT_BUTTON" desc="Button to import from another browser">Import</message>
@@ -545,7 +545,7 @@
       <message name="IDS_BRAVE_REWARDS_ONBOARDING_EARN_HEADER" desc="">Earn Tokens &amp; Give Back</message>
       <message name="IDS_BRAVE_REWARDS_ONBOARDING_EARN_TEXT" desc="">Earn tokens by viewing privacy-respecting ads and support your favorite sites and content creators automatically.</message>
       <message name="IDS_BRAVE_REWARDS_ONBOARDING_MAYBE_LATER" desc="">Maybe Later</message>
-      <message name="IDS_BRAVE_REWARDS_ONBOARDING_START_USING_REWARDS" desc="">Start using XFII Rewards</message>
+      <message name="IDS_BRAVE_REWARDS_ONBOARDING_START_USING_REWARDS" desc="">Buy XFII</message>
       <message name="IDS_BRAVE_REWARDS_ONBOARDING_TERMS" desc="">By proceeding, you agree to the <ph name="LINK_BEGIN">$1</ph>Terms of Service<ph name="LINK_END">$2</ph> and <ph name="LINK_BEGIN">$3</ph>Privacy Policy<ph name="LINK_END">$4</ph>.</message>
       <message name="IDS_BRAVE_REWARDS_ONBOARDING_TIP_HEADER" desc="">Tip with XFII rewards</message>
       <message name="IDS_BRAVE_REWARDS_ONBOARDING_TIP_TEXT" desc="">By using XFII rewards, you will start to gain BAT that you can use to tip creators.</message>
@@ -582,7 +582,7 @@
       <message name="IDS_BRAVE_UI_BRAVE_CONTRIBUTE_DESC" desc="">Support your favorite sites just by browsing – or tip a site any time you like.</message>
       <message name="IDS_BRAVE_UI_BRAVE_CONTRIBUTE_TITLE" desc="">Auto-Contribute</message>
       <message name="IDS_BRAVE_UI_BRAVE_CONTRIBUTE_TRANSACTION" desc="">Auto-Contribute {{processor}}</message>
-      <message name="IDS_BRAVE_UI_BRAVE_REWARDS" desc="">XFII Rewards</message>
+      <message name="IDS_BRAVE_UI_BRAVE_REWARDS" desc="">XFII Market</message>
       <message name="IDS_BRAVE_UI_AND" desc="">and</message>
       <message name="IDS_BRAVE_UI_PRIVACY_POLICY" desc="">Privacy Policy</message>
       <message name="IDS_BRAVE_UI_TERMS_OF_SERVICE" desc="">Terms of Service</message>
@@ -778,8 +778,8 @@
       <message name="IDS_BRAVE_UI_POINT_GRANTS" desc="">Point Grants</message>
       <message name="IDS_BRAVE_UI_QR_CODE_LOADING" desc="">Loading image...</message>
       <message name="IDS_BRAVE_UI_TRANSACTIONS" desc="">Transactions</message>
-      <message name="IDS_BRAVE_UI_TURN_ON_ADS" desc="">Start using XFII Rewards</message>
-      <message name="IDS_BRAVE_UI_TURN_ON_TEXT" desc="">Earn tokens by viewing privacy-respecting ads and support your favorite web content creators by default.</message>
+      <message name="IDS_BRAVE_UI_TURN_ON_ADS" desc="">Buy XFII</message>
+      <message name="IDS_BRAVE_UI_TURN_ON_TEXT" desc="">Invest in XFII</message>
       <message name="IDS_BRAVE_UI_TURN_ON_REWARDS_DESC" desc="">This enables both ads and automatic contributions. You can turn them on or off separately at any time.</message>
       <message name="IDS_BRAVE_UI_TURN_ON_REWARDS_TITLE" desc="">Activate Rewards</message>
       <message name="IDS_BRAVE_UI_TYPE" desc="">Type</message>
@@ -868,12 +868,12 @@
 
       <!-- Rewards New Tab Widget resources -->
       <message name="IDS_REWARDS_WIDGET_ABOUT_REWARDS" desc="">
-        <ph name="LINK_BEGIN">$1</ph>Learn more<ph name="LINK_END">$2</ph> about XFII Rewards
+        <ph name="LINK_BEGIN">$1</ph>Learn more<ph name="LINK_END">$2</ph> about XFII Coin
       </message>
       <message name="IDS_REWARDS_WIDGET_SERVICE_TEXT"
         desc="Small-print for enabling XFII Rewards on the New Tab Page"
       >
-        By clicking Start using XFII Rewards, you agree to the <ph name="LINK_BEGIN">$1</ph>Terms of Service<ph name="LINK_END">$2</ph> and <ph name="LINK_BEGIN">$3</ph>Privacy Policy<ph name="LINK_END">$4</ph>.
+      This Will be a great Furture Investment 
       </message>
       <message name="IDS_REWARDS_WIDGET_ESTIMATED_EARNINGS" desc="">Estimated earnings so far this month</message>
       <message name="IDS_REWARDS_WIDGET_MONTHLY_TIPS" desc="">Tips and contributions this month</message>
@@ -908,7 +908,7 @@
       </message>
       <message name="IDS_EDIT_CARDS_TITLE" desc="">Edit Cards</message>
       <message name="IDS_REWARDS_WIDGET_TOS_AND_PP" desc="">By clicking {{title}}, you agree to the <ph name="BEGIN_LINK1">$1</ph>Terms of Service<ph name="END_LINK1">$2</ph> and <ph name="BEGIN_LINK2">$3</ph>Privacy Policy<ph name="END_LINK2">$4</ph>.</message>
-      <message name="IDS_REWARDS_WIDGET_START_USING" desc="">Start using XFII Rewards</message>
+      <message name="IDS_REWARDS_WIDGET_START_USING" desc="">Buy XFII</message>
       <message name="IDS_TOGETHER_WIDGET_TITLE" desc="">XFII Together</message>
       <message name="IDS_TOGETHER_WIDGET_WELCOME_TITLE" desc="">Start a private video call with your friends and colleagues.</message>
       <message name="IDS_TOGETHER_WIDGET_START_BUTTON" desc="">Start video call</message>
@@ -990,7 +990,7 @@
       <message name="IDS_BRAVE_WALLET_DISCLOSURE_TWO" desc="">Only use Crypto Wallets if you accept that you alone are responsible for all risk associated with this use, and that XFII Software bears no responsibility or liability for any losses including incidental or consequential losses you might suffer as a result of this use.</message>
       <message name="IDS_BRAVE_WALLET_DISCLOSURE_THREE" desc="">All of this is completely separate from</message>
       <message name="IDS_BRAVE_WALLET_DISCLOSURE_FOUR" desc="">So if you were looking to support your favorite sites, head over there instead.</message>
-      <message name="IDS_BRAVE_WALLET_BRAVE_REWARDS" desc="">XFII Rewards</message>
+      <message name="IDS_BRAVE_WALLET_BRAVE_REWARDS" desc="">XFII</message>
       <message name="IDS_BRAVE_WALLET_DOWNLOADING" desc="">Downloading Component...</message>
       <message name="IDS_BRAVE_WALLET_DISCLOSURE_CONFIRM" desc="">I understand</message>
       <!-- Permissions -->

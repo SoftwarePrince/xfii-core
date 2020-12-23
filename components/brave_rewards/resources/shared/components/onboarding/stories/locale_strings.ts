@@ -8,8 +8,8 @@ export const localeStrings = {
   onboardingEarnText: 'Earn tokens by viewing privacy-respecting ads and support your favorite sites and content creators automatically.',
   onboardingGoToUphold: 'Take me to Uphold',
   onboardingMaybeLater: 'Maybe later',
-  onboardingStartUsingRewards: 'Start using XFII Rewards',
-  onboardingTerms: 'By proceeding, you agree to the $1Terms of Service$2 and $3Privacy Policy$4.',
+  onboardingStartUsingRewards: 'Buy XFII',
+  onboardingTerms: 'Invest in XFII Coin',
   onboardingTipHeader: 'Tip with XFII rewards',
-  onboardingTipText: 'By using XFII rewards, you will start to gain BAT that you can use to tip creators.'
+  onboardingTipText: 'By using XFII rewards, you will start to gain XFII that you can use to tip creators.'
 }

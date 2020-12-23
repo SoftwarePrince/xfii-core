@@ -4,11 +4,13 @@
 // you can obtain one at http://mozilla.org/MPL/2.0/.
 
 // Redux API
-import { createStore} from 'redux'
+import { createStore, applyMiddleware } from 'redux'
 
 // Feature core reducer
 import { mainNewTabReducer } from './reducers'
+import todayAsyncHandler from './async/today'
 
 export default createStore(
-  mainNewTabReducer
+  mainNewTabReducer,
+  applyMiddleware(todayAsyncHandler)
 )

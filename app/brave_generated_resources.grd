@@ -152,7 +152,7 @@
   <release seq="1">
     <messages fallback_to_english="true">
       <message name="IDS_SHOW_BRAVE_REWARDS" desc="The show XFII Rewards menu in the app xfii main menu">
-        XFII Rewards
+        XFII
       </message>
       <message name="IDS_SHOW_BRAVE_ADBLOCK" desc="The show XFII Ad Block menu in the app menu">
         XFII Ad Block
@@ -250,7 +250,7 @@ By installing this extension, you are agreeing to the Google Widevine Terms of U
         Use wide address bar
       </message>
       <message name="IDS_SETTINGS_HIDE_BRAVE_REWARDS_BUTTON_LABEL" desc="The label for settings switch controlling the visibility of XFII Rewards button">
-        Hide XFII Rewards button
+        Hide Buy XFII
       </message>
       <message name="IDS_SETTINGS_ALWAYS_SHOW_BOOKMARK_BAR_ON_NTP" desc="The label for settings switch controlling the visibility of bookmarks bar on NTP">
         Always show bookmarks on new tab page
@@ -283,7 +283,7 @@ By installing this extension, you are agreeing to the Google Widevine Terms of U
        New Tab Page
       </message>
       <message name="IDS_SETTINGS_NEW_TAB_BRAVE_REWARDS" desc="The label for XFII Rewards show/hide feature toggle">
-        XFII Rewards
+       Buy XFII
       </message>
       <message name="IDS_SETTINGS_NEW_TAB_NEW_TAB_PAGE_SHOWS" desc="The label for New Tab Page shows customization">
         New tab page shows

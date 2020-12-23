@@ -2,54 +2,52 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
  * You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-import * as React from 'react'
-import { StyledWidget, StyledWidgetContainer } from './styles'
-import WidgetMenu from './widgetMenu'
-
-type HideWidgetFunction = () => void
+import * as React from "react";
+import { StyledWidget, StyledWidgetContainer } from "./styles";
+import WidgetMenu from "./widgetMenu";
 
 export interface WidgetProps {
-  menuPosition: 'right' | 'left'
-  hideWidget?: HideWidgetFunction
-  preventFocus?: boolean
-  textDirection: string
-  isCrypto?: boolean
-  isCryptoTab?: boolean
-  widgetTitle?: string
-  hideMenu?: boolean
-  isForeground?: boolean
-  lightWidget?: boolean
-  paddingType: 'none' | 'right' | 'default'
-  onLearnMore?: () => void
-  onDisconnect?: () => void
-  onRefreshData?: () => void
+  menuPosition: "right" | "left";
+  preventFocus?: boolean;
+  textDirection: string;
+  isCrypto?: boolean;
+  isCryptoTab?: boolean;
+  widgetTitle?: string;
+  hideMenu?: boolean;
+  isForeground?: boolean;
+  lightWidget?: boolean;
+  paddingType: "none" | "right" | "default";
+  onLearnMore?: () => void;
+  onDisconnect?: () => void;
+  onRefreshData?: () => void;
 }
 
 export interface WidgetState {
-  widgetMenuPersist: boolean
+  widgetMenuPersist: boolean;
 }
 
-const createWidget = <P extends object>(WrappedComponent: React.ComponentType<P>) =>
+const createWidget = <P extends object>(
+  WrappedComponent: React.ComponentType<P>
+) =>
   class Widget extends React.Component<P & WidgetProps, WidgetState> {
-    constructor (props: P & WidgetProps) {
-      super(props)
+    constructor(props: P & WidgetProps) {
+      super(props);
       this.state = {
-        widgetMenuPersist: !!props.isForeground
-      }
+        widgetMenuPersist: !!props.isForeground,
+      };
     }
 
     persistWidget = () => {
-      this.setState({ widgetMenuPersist: true })
-    }
+      this.setState({ widgetMenuPersist: true });
+    };
 
     unpersistWidget = () => {
-      this.setState({ widgetMenuPersist: false })
-    }
+      this.setState({ widgetMenuPersist: false });
+    };
 
-    render () {
+    render() {
       const {
         menuPosition,
-        hideWidget,
         textDirection,
         preventFocus,
         isCrypto,
@@ -61,9 +59,9 @@ const createWidget = <P extends object>(WrappedComponent: React.ComponentType<P>
         paddingType,
         onLearnMore,
         onDisconnect,
-        onRefreshData
-      } = this.props
-      const { widgetMenuPersist } = this.state
+        onRefreshData,
+      } = this.props;
+      const { widgetMenuPersist } = this.state;
 
       return (
         <StyledWidgetContainer
@@ -77,28 +75,27 @@ const createWidget = <P extends object>(WrappedComponent: React.ComponentType<P>
             preventFocus={preventFocus}
             paddingType={paddingType}
           >
-            <WrappedComponent {...this.props as P}/>
+            <WrappedComponent {...(this.props as P)} />
           </StyledWidget>
-          {hideWidget && !hideMenu && !preventFocus &&
-          <WidgetMenu
-            widgetTitle={widgetTitle}
-            onLearnMore={onLearnMore}
-            onDisconnect={onDisconnect}
-            onRefreshData={onRefreshData}
-            isForeground={isForeground}
-            widgetMenuPersist={widgetMenuPersist}
-            textDirection={textDirection}
-            menuPosition={menuPosition}
-            hideWidget={hideWidget as HideWidgetFunction}
-            persistWidget={this.persistWidget}
-            unpersistWidget={this.unpersistWidget}
-            lightWidget={lightWidget}
-            paddingType={paddingType}
-          />
-          }
+          {!hideMenu && !preventFocus && (
+            <WidgetMenu
+              widgetTitle={widgetTitle}
+              onLearnMore={onLearnMore}
+              onDisconnect={onDisconnect}
+              onRefreshData={onRefreshData}
+              isForeground={isForeground}
+              widgetMenuPersist={widgetMenuPersist}
+              textDirection={textDirection}
+              menuPosition={menuPosition}
+              persistWidget={this.persistWidget}
+              unpersistWidget={this.unpersistWidget}
+              lightWidget={lightWidget}
+              paddingType={paddingType}
+            />
+          )}
         </StyledWidgetContainer>
-      )
+      );
     }
-  }
+  };
 
-export default createWidget
+export default createWidget;

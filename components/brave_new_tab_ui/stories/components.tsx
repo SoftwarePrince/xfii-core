@@ -11,6 +11,9 @@ import BraveCoreThemeProvider from '../../common/BraveCoreThemeProvider'
 
 // Components
 import Loading from '../components/loading'
+import BraveTodayLoadingCard from '../components/default/braveToday/cards/cardLoading'
+import BraveTodayErrorCard from '../components/default/braveToday/cards/cardError'
+import PublisherMeta from '../components/default/braveToday/cards/PublisherMeta'
 
 function ThemeProvider ({ story }: any) {
   const themeName = select(
@@ -30,6 +33,8 @@ function ThemeProvider ({ story }: any) {
   )
 }
 
+const onClick = (() => alert('clicked'))
+
 storiesOf('New Tab', module)
   .addDecorator(withKnobs)
   .addDecorator(story => <ThemeProvider story={story()} />)
@@ -41,3 +46,56 @@ storiesOf('New Tab', module)
     </div>
   ))
 
+storiesOf('New Tab/Brave Today', module)
+  .addDecorator(withKnobs)
+  .addDecorator(story => <ThemeProvider story={story()} />)
+  .addDecorator(story => (
+    <div
+      style={{
+        display: 'flex',
+        fontFamily: 'Poppins',
+        alignItems: 'center',
+        justifyContent: 'center',
+        gap: '20px',
+        width: '100%',
+        minHeight: '100vh',
+        background: 'url(https://placekitten.com/2000/3000)',
+        backgroundSize: 'contain',
+        color: 'pink',
+        fontSize: '22px',
+        fontWeight: 600
+      }}
+    >
+      {story()}
+    </div>
+  ))
+  .add('Publisher', () => (
+    <>
+      <PublisherMeta
+        publisher={{
+          publisher_id: '123abc',
+          publisher_name: text('Publisher Name', 'small'),
+          category: 'Top News',
+          enabled: true,
+          user_enabled: null
+        }}
+        onSetPublisherPref={onClick}
+      />
+      <PublisherMeta
+        publisher={{
+          publisher_id: '123abcdef',
+          publisher_name: text('Publisher Name 2', 'The Miller Chronicle'),
+          category: 'Top News',
+          enabled: true,
+          user_enabled: null
+        }}
+        onSetPublisherPref={onClick}
+      />
+    </>
+  ))
+  .add('Loading', () => (
+    <BraveTodayLoadingCard />
+  ))
+  .add('Error', () => (
+    <BraveTodayErrorCard />
+  ))

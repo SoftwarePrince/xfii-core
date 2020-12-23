@@ -10,15 +10,28 @@ import * as torTabDataAPI from './torTabData'
 import * as brandedWallpaper from './brandedWallpaper'
 
 export type InitialData = {
-  preferences: preferencesAPI.Preferences
+  preferences: NewTab.Preferences
   stats: statsAPI.Stats
   privateTabData: privateTabDataAPI.PrivateTabData
   torTabData: torTabDataAPI.TorTabData
   brandedWallpaperData: undefined | NewTab.BrandedWallpaper
+  togetherSupported: boolean
+  geminiSupported: boolean
+  binanceSupported: boolean
+  cryptoDotComSupported: boolean
 }
 
+export type PreInitialRewardsData = {
+  enabledAds: boolean
+  adsSupported: boolean
+}
 
-
+export type InitialRewardsData = {
+  adsEstimatedEarnings: number
+  report: NewTab.RewardsBalanceReport
+  balance: NewTab.RewardsBalance
+  parameters: NewTab.RewardsParameters
+}
 
 const isIncognito: boolean = chrome.extension.inIncognitoContext
 
@@ -31,7 +44,11 @@ export async function getInitialData (): Promise<InitialData> {
       stats,
       privateTabData,
       torTabData,
-      brandedWallpaperData
+      brandedWallpaperData,
+      togetherSupported,
+      geminiSupported,
+      cryptoDotComSupported,
+      binanceSupported
     ] = await Promise.all([
       preferencesAPI.getPreferences(),
       statsAPI.getStats(),
@@ -39,11 +56,30 @@ export async function getInitialData (): Promise<InitialData> {
       torTabDataAPI.getTorTabData(),
       !isIncognito ? brandedWallpaper.getBrandedWallpaper() : Promise.resolve(undefined),
       new Promise((resolve) => {
+        if (!('braveTogether' in chrome)) {
+          resolve(false)
+          return
+        }
 
+        chrome.braveTogether.isSupported((supported: boolean) => {
+          resolve(supported)
+        })
       }),
       new Promise((resolve) => {
-        resolve(false)
+        chrome.gemini.isSupported((supported: boolean) => {
+          resolve(supported)
+        })
       }),
+      new Promise((resolve) => {
+        chrome.cryptoDotCom.isSupported((supported: boolean) => {
+          resolve(supported)
+        })
+      }),
+      new Promise((resolve) => {
+        chrome.binance.isSupportedRegion((supported: boolean) => {
+          resolve(supported)
+        })
+      })
     ])
     console.timeStamp('Got all initial data.')
     return {
@@ -51,7 +87,11 @@ export async function getInitialData (): Promise<InitialData> {
       stats,
       privateTabData,
       torTabData,
-      brandedWallpaperData
+      brandedWallpaperData,
+      togetherSupported,
+      geminiSupported,
+      cryptoDotComSupported,
+      binanceSupported
     } as InitialData
   } catch (e) {
     console.error(e)
@@ -59,3 +99,60 @@ export async function getInitialData (): Promise<InitialData> {
   }
 }
 
+export async function getRewardsPreInitialData (): Promise<PreInitialRewardsData> {
+  try {
+    const [
+      enabledAds,
+      adsSupported
+    ] = await Promise.all([
+      new Promise(resolve => chrome.braveRewards.getAdsEnabled((enabledAds: boolean) => {
+        resolve(enabledAds)
+      })),
+      new Promise(resolve => chrome.braveRewards.getAdsSupported((adsSupported: boolean) => {
+        resolve(adsSupported)
+      }))
+    ])
+    return {
+      enabledAds,
+      adsSupported
+    } as PreInitialRewardsData
+  } catch (err) {
+    throw Error(err)
+  }
+}
+
+export async function getRewardsInitialData (): Promise<InitialRewardsData> {
+  try {
+    const [
+      adsEstimatedEarnings,
+      report,
+      balance,
+      parameters
+    ] = await Promise.all([
+      new Promise(resolve => chrome.braveRewards.getAdsEstimatedEarnings((adsEstimatedEarnings: number) => {
+        resolve(adsEstimatedEarnings)
+      })),
+      new Promise(resolve => chrome.braveRewards.getBalanceReport(new Date().getMonth() + 1, new Date().getFullYear(),(report: NewTab.RewardsBalanceReport) => {
+        resolve(report)
+      })),
+      new Promise(resolve => chrome.braveRewards.fetchBalance((balance: NewTab.RewardsBalance) => {
+        resolve(balance)
+      })),
+      new Promise(resolve => chrome.braveRewards.getRewardsParameters((parameters: NewTab.RewardsParameters) => {
+        resolve(parameters)
+      })),
+      new Promise(resolve => {
+        chrome.braveRewards.fetchPromotions()
+        resolve(true)
+      })
+    ])
+    return {
+      adsEstimatedEarnings,
+      report,
+      balance,
+      parameters
+    } as InitialRewardsData
+  } catch (err) {
+    throw Error(err)
+  }
+}

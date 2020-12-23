@@ -24,7 +24,7 @@ export const localeStrings = {
   notEnoughTokensLink: 'Not enough {{currency}}. Please',
   on: 'on',
   onboardingMaybeLater: 'Maybe later',
-  onboardingStartUsingRewards: 'Start using XFII Rewards',
+  onboardingStartUsingRewards: 'Buy XFII',
   onboardingTerms: 'By proceeding, you agree to the $1Terms of Service$2 and $3Privacy Policy$4.',
   onboardingTipHeader: 'Tip with XFII rewards',
   onboardingTipText: 'By using XFII rewards, you will start to gain BAT that you can use to tip creators.',

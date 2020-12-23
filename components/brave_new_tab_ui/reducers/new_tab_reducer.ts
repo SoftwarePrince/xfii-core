@@ -44,9 +44,18 @@ export const newTabReducer: Reducer<NewTab.State | undefined> = (state: NewTab.S
         brandedWallpaperData: initialDataPayload.brandedWallpaperData,
         ...initialDataPayload.privateTabData,
         ...initialDataPayload.torTabData,
-
+        togetherSupported: initialDataPayload.togetherSupported,
+        geminiSupported: initialDataPayload.geminiSupported,
+        cryptoDotComSupported: initialDataPayload.cryptoDotComSupported,
+        binanceSupported: initialDataPayload.binanceSupported
       }
-
+      if (state.brandedWallpaperData && !state.brandedWallpaperData.isSponsored) {
+        // Update feature flag if this is super referral wallpaper.
+        state = {
+          ...state,
+          featureFlagBraveNTPSponsoredImagesWallpaper: false
+        }
+      }
       // TODO(petemill): only get backgroundImage if no sponsored background this time.
       // ...We would also have to set the value at the action
       // the branded wallpaper is turned off. Since this is a cheap string API
@@ -66,6 +75,9 @@ export const newTabReducer: Reducer<NewTab.State | undefined> = (state: NewTab.S
         }
       })
 
+      if (state.currentStackWidget) {
+        state = storage.migrateStackWidgetSettings(state)
+      }
       state = storage.addNewStackWidget(state)
       state = storage.replaceStackWidgets(state)
 
@@ -111,7 +123,7 @@ export const newTabReducer: Reducer<NewTab.State | undefined> = (state: NewTab.S
       break
 
     case types.NEW_TAB_PREFERENCES_UPDATED:
-      const preferences = payload as preferencesAPI.Preferences
+      const preferences = payload as NewTab.Preferences
       const newState = {
         ...state,
         ...preferences
@@ -122,7 +134,7 @@ export const newTabReducer: Reducer<NewTab.State | undefined> = (state: NewTab.S
       // or refreshed.
       newState.isBrandedWallpaperNotificationDismissed = state.isBrandedWallpaperNotificationDismissed
       // Remove branded wallpaper when opting out or turning wallpapers off
-      const hasTurnedBrandedWallpaperOff =  state.brandedWallpaperData
+      const hasTurnedBrandedWallpaperOff = !preferences.brandedWallpaperOptIn && state.brandedWallpaperData
       const hasTurnedWallpaperOff = !preferences.showBackgroundImage && state.showBackgroundImage
       // We always show SR images regardless of background options state.
       const isSuperReferral = state.brandedWallpaperData && !state.brandedWallpaperData.isSponsored

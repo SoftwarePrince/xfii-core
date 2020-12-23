@@ -29,12 +29,15 @@ type AppProps = {
 type PageProps = {
   showClock: boolean
   showStats: boolean
+  showRewards: boolean
+  showBinance: boolean
+  showTogether: boolean
   showTopSites: boolean
   showBrandedWallpaper: boolean
 } & HasImageProps
 
 function getItemRowCount (p: PageProps): number {
-  let right = (p.showClock ? 1 : 0) 
+  let right = (p.showClock ? 1 : 0) + (p.showRewards ? 2 : 0)
   let left = (p.showStats ? 1 : 0) + (p.showTopSites ? 1 : 0)
   // Has space for branded logo to sit next to something on right?
   if (p.showBrandedWallpaper && left >= right) {
@@ -77,24 +80,23 @@ const StyledPage = styled<PageProps, 'div'>('div')`
   min-height: 100vh;
   align-items: flex-start;
 
-  /* Blur out the content when Brave Today is interacted
-      with. We need the opacity to fade out our background image.
-      We need the background image to overcome the bug
-      where a backdrop-filter element's ancestor which has
-      a filter must also have a background. When this bug is
-      fixed then this element won't need the background.
-  */
-  filter: blur(var(--blur-amount));
-  opacity: calc(1 - var(--ntp-extra-content-effect-multiplier));
-  background: var(--default-bg-color);
-  ${getPageBackground}
-
   /* Fix the main NTP content so, when Brave Today is in-view,
   NTP items remain in the same place, and still allows NTP
   Page to scroll to the bottom before that starts happening. */
   .${CLASSNAME_PAGE_STUCK} & {
     position: fixed;
     bottom: 0;
+    /* Blur out the content when Brave Today is interacted
+      with. We need the opacity to fade out our background image.
+      We need the background image to overcome the bug
+      where a backdrop-filter element's ancestor which has
+      a filter must also have a background. When this bug is
+      fixed then this element won't need the background.
+    */
+    opacity: calc(1 - var(--ntp-extra-content-effect-multiplier));
+    filter: blur(var(--blur-amount));
+    background: var(--default-bg-color);
+    ${getPageBackground}
   }
 
   @media screen and (max-width: ${breakpointEveryBlock}) {
@@ -122,7 +124,7 @@ export const Page: React.FunctionComponent<PageProps> = (props) => {
       const viewportHeight = window.innerHeight
       const scrollBottom = window.scrollY + viewportHeight
       const scrollPast = scrollBottom - element.clientHeight
-      if (scrollPast >= 0) {
+      if (scrollPast >= 1) {
         // Have blur effect amount follow scroll amount. Should
         // be fully blurred at 50% of viewport height
         const blurUpperLimit = viewportHeight * .65
@@ -182,7 +184,6 @@ export const GridItemWidgetStack = styled('section')`
 
 export const GridItemTopSites = styled('section')`
   grid-column: 1 / span 2;
-  min-height: calc(100vh - 220px);
   ${singleColumnSmallViewport}
 `
 
@@ -227,6 +228,13 @@ export const GridItemNavigation = styled('section')`
   }
 `
 
+export const GridItemNavigationBraveToday = styled<{}, 'div'>('div')`
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  margin: 0 auto;
+`
 
 export const Footer = styled<{}, 'footer'>('footer')`
   /* Child items are primary Grid items and can slot in to free spaces,
@@ -316,6 +324,16 @@ export const App = styled<AppProps & HasImageProps, 'div'>('div')`
 `
 
 export const Link = styled<{}, 'a'>('a')`
+  text-decoration: none;
+  transition: color 0.15s ease, filter 0.15s ease;
+  color: rgba(255, 255, 255, 0.8);
+
+  &:hover {
+    color: rgba(255, 255, 255, 1);
+  }
+`
+
+export const Label = styled<{}, 'span'>('span')`
   text-decoration: none;
   transition: color 0.15s ease, filter 0.15s ease;
   color: rgba(255, 255, 255, 0.8);
