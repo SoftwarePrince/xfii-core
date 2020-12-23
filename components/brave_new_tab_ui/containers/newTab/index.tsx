@@ -1125,7 +1125,6 @@ class NewTabPage extends React.Component<Props, State> {
                 widgetTitle={getLocale("topSitesTitle")}
                 gridSites={gridSitesData.gridSites}
                 menuPosition={"right"}
-                hideWidget={this.toggleShowTopSites}
                 textDirection={newTabData.textDirection}
               />
             </Page.GridItemTopSites>

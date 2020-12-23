@@ -24,7 +24,6 @@ import { getLocale } from "../../../../common/locale";
 
 interface Props {
   menuPosition: "right" | "left";
-  hideWidget: () => void;
   textDirection: string;
   widgetMenuPersist: boolean;
   persistWidget: () => void;
