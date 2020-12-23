@@ -17,7 +17,6 @@ import {
   BinanceWidget as Binance,
   GeminiWidget as Gemini,
   CryptoDotComWidget as CryptoDotCom,
-  EditCards,
 } from "../../components/default";
 import * as Page from "../../components/default/page";
 import BrandedWallpaperLogo from "../../components/default/brandedWallpaper/logo";
@@ -829,7 +828,6 @@ class NewTabPage extends React.Component<Props, State> {
   renderCryptoContent() {
     const { newTabData } = this.props;
     const { widgetStackOrder } = newTabData;
-    const allWidgetsHidden = this.allWidgetsHidden();
 
     if (!widgetStackOrder.length) {
       return null;
@@ -838,9 +836,6 @@ class NewTabPage extends React.Component<Props, State> {
     return (
       <Page.GridItemWidgetStack>
         {this.getCryptoContent()}
-        {!allWidgetsHidden && (
-          <EditCards onEditCards={this.openSettingsEditCards} />
-        )}
       </Page.GridItemWidgetStack>
     );
   }

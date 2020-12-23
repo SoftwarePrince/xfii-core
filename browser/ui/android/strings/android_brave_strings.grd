@@ -328,7 +328,7 @@ This file contains all "about" strings.  It is set to NOT be translated, in tran
         Block
       </message>
       <message name="IDS_BRAVE_SHIELDS_ONBOARDING_TITLE" desc="Title for brave shield page">
-        Brave Shields
+        XFII Shields
       </message>
       <message name="IDS_BRAVE_SHIELDS_ONBOARDING_TEXT" desc="Text for brave shield page">
         privacy-invading ads and trackers so you can browse without being followed around the web.

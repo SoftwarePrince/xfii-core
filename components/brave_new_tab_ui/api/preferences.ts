@@ -23,7 +23,7 @@ function sendSavePref (key: string, value: any) {
 
 saveShowBackgroundImage(false);
 export function saveShowBackgroundImage (value: boolean): void {
-  console.log("sendSavePref('showBackgroundImage', value)", value);
+ // console.log("sendSavePref('showBackgroundImage', value)", value);
   sendSavePref('showBackgroundImage', value)
 }
 
@@ -59,7 +59,7 @@ export function saveShowBinance (value: boolean): void {
 }
 
 export function saveBrandedWallpaperOptIn (value: boolean): void {
-  console.log("sendSavePref('brandedWallpaperOptIn', value)", value);
+  //console.log("sendSavePref('brandedWallpaperOptIn', value)", value);
   sendSavePref('brandedWallpaperOptIn', value)
 }
 
