@@ -1088,7 +1088,7 @@ class NewTabPage extends React.Component<Props, State> {
           showTopSites={showTopSites}
           showBrandedWallpaper={isShowingBrandedWallpaper}
         >
-          {newTabData.showStats && (
+          {newTabData.showStats && false && (
             <Page.GridItemStats>
               <Stats
                 paddingType={"right"}
